@@ -1,5 +1,7 @@
 # Goldberg–Palatini bootstrap: symbolic supplementary material
 
+[![DOI](https://zenodo.org/badge/1370488889.svg)](https://doi.org/10.5281/zenodo.22757769)
+
 This material accompanies `bootstrap_article_v2.tex`. It reconstructs the first-order Goldberg–Palatini action from prescribed Noether identities and checks its second-order quadratic and cubic Lagrangians against Capper, Leibbrandt and Ramón Medrano (CLM), *Physical Review D* **8**, 4320 (1973), DOI: [10.1103/PhysRevD.8.4320](https://doi.org/10.1103/PhysRevD.8.4320).
 
 ## Files and scope
@@ -143,4 +145,5 @@ Python/SymPy implementations of basis generation and Gram determinants exist in 
 
 Before public distribution: complete the authors' final notebook review, verify the final bootstrap-to-export-to-CLM sequence, record tested versions and resource measurements, and choose a license for the authors' code. Publish the approved bundle with a tagged release and archival DOI. Third-party packages remain subject to their own licenses.
 
-No public repository URL, archival DOI, or code-license choice is asserted by this working README.
+Repository: https://github.com/fernandotcbrandt/goldberg-palatini-bootstrap (MIT license for the authors' code).
+Release `v1.0-submission` (2026-09-14) is archived on Zenodo: version DOI 10.5281/zenodo.22757770; concept DOI 10.5281/zenodo.22757769 (latest version). The command-line drivers and the free-Engine validation described above are not part of this release.
