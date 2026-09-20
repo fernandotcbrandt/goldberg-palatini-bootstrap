@@ -52,7 +52,7 @@ Expected first-order results:
 
 - Kernel-basis sizes: **4, 6, 5, 16** (31 coefficients in total).
 - Projection-set sizes: **3, 6, 7, 23, 20, 95**, with the domain and momentum specialization stated in the paper. These counts do not imply independence in every dimension.
-- One overall normalization remains. With `cGG = 1/(Nd - 1)`, the nonzero coefficients in the notebook's basis order are `bhG = -1`, `aGG = -1`, `cGG = 1/(Nd - 1)`, `v1 = -1`, and `v7 = 1/(Nd - 1)`.
+- One overall normalization remains. With `cGG = 1/(Nd - 1)`, the nonzero coefficients in the notebook's basis order are `bhG = -1`, `aGG = -1`, `cGG = 1/(Nd - 1)`, `ahGG = -1`, and `ghGG = 1/(Nd - 1)`.
 - `fullCubicKernelResidual` is **0**. This checks the complete first-order phi-G-G kernel, not the second-order CLM vertex.
 
 The 95-element W34 projection calculation may be the most expensive stage. Reliable runtime and peak-memory measurements have not yet been recorded for the release.
