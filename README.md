@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/1370488889.svg)](https://doi.org/10.5281/zenodo.22757769)
 
-This material accompanies `bootstrap_article_v2.tex`. It reconstructs the first-order Goldberg–Palatini action from prescribed Noether identities and checks its second-order quadratic and cubic Lagrangians against Capper, Leibbrandt and Ramón Medrano (CLM), *Physical Review D* **8**, 4320 (1973), DOI: [10.1103/PhysRevD.8.4320](https://doi.org/10.1103/PhysRevD.8.4320).
+This material accompanies `paper/bootstrap_article_v3.tex`. It reconstructs the first-order Goldberg–Palatini action from prescribed Noether identities and checks its second-order quadratic and cubic Lagrangians against Capper, Leibbrandt and Ramón Medrano (CLM), *Physical Review D* **8**, 4320 (1973), DOI: [10.1103/PhysRevD.8.4320](https://doi.org/10.1103/PhysRevD.8.4320).
 
 ## Files and scope
 
@@ -100,7 +100,7 @@ The metric and indices are abstract. The export uses ``GPBootstrapData`Eta[i,j]`
 
 The bootstrap basis is used in generic dimension d >= 4. The derived inverse has a pole at d = 2. No gauge fixing or field equations for phi are used in the CLM comparison.
 
-The nonlinear identities are solved with the field momenta identified, as described in Sections IV and VI. Every solution for arbitrary momenta also solves this specialized system. The specialized solution space is one-dimensional, and it contains the nonzero Goldberg–Palatini action, which is invariant for arbitrary momenta under the prescribed transformations. Thus the two solution spaces coincide within the stated ansatz. This distribution does not include a separate generic-momentum W31 calculation or claim a direct computational verification of all identities at arbitrary momenta.
+The nonlinear identities are solved with the field momenta identified, as described in Section IV. Every solution for arbitrary momenta also solves this specialized system. The specialized solution space is one-dimensional, and it contains the nonzero Goldberg–Palatini action, for which the identities hold for arbitrary momenta, since its variation under the prescribed transformations is a total derivative. Thus the two solution spaces coincide within the stated ansatz. This distribution does not include a separate generic-momentum W31 calculation or claim a direct computational verification of all identities at arbitrary momenta.
 
 CLM uses the opposite Ricci-tensor sign and an action prefactor 2/K², whereas the unrescaled bootstrap action has prefactor 1/kappa². With K = kappa and CLM's coupling-stripped coefficients, the checks establish:
 
@@ -125,12 +125,12 @@ Equation and table numbers refer to the current manuscript; the LaTeX labels ide
 
 | Calculation | Manuscript location/label |
 | --- | --- |
-| Kernel bases and projection sets | Tables II–III; `tab:kernels`, `tab:identities`; Appendices C–D |
-| Sequential coefficient solution | Table IV; `tab:flow` |
+| Kernel bases and projection sets | Tables I–II; `tab:kernels`, `tab:identities`; Appendices C–D |
+| Sequential coefficient solution | Table III; `tab:flow` |
 | Explicit first-order kernels | Appendix E; `app:kernels`; Tables V–VIII |
-| Eliminating the connection | Eqs. (6.1)–(6.3); `eq:second`, `eq:inverse-expansion`, `eq:cubicvertex` |
-| Quadratic comparison and boundary current | Eq. (6.4); `eq:clm-quadratic` |
-| Cubic comparison | Eq. (6.5); `eq:clm-cubic` |
+| Eliminating the connection | Eqs. (6.1)–(6.2); `eq:second`, `eq:cubicvertex` |
+| Quadratic comparison and boundary current | Eq. (6.3); `eq:clm-quadratic` |
+| Cubic comparison | Eq. (6.4); `eq:clm-cubic` |
 | File descriptions and reproducibility | Appendix F; `app:implementation` |
 
 ## Command-line and free-Engine status

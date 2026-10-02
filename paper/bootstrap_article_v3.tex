@@ -42,18 +42,15 @@ identities associated with diffeomorphism invariance. The independent fields are
 perturbation of the contravariant metric density and an independent trace-adjusted
 connection, with prescribed transformation laws. In generic spacetime dimension, we construct a local,
 Lorentz-covariant ansatz containing quadratic terms with at most two derivatives and a cubic
-interaction restricted to the structure $\phi GG$. The action kernels are expanded in tensor
-bases comprising 31 independent coefficients. Expanding the Noether identities order by order
-in the fields yields algebraic constraints, which we solve using symbolic computation. These
-constraints eliminate the $\phi\phi$ kernel and determine the remaining coefficients up to an
-overall normalization, recovering the Goldberg--Palatini action. Since the connection can be
-eliminated exactly, the result also determines the complete
-second-order action, with its infinite set of graviton vertices. The construction requires no
-choice of an energy--momentum tensor to guide the self-coupling procedure and directly
-identifies the restrictions imposed by the prescribed symmetry. The result establishes
-uniqueness within the assumed class of actions. All tensor bases, identities and solutions are
-provided in appendices, and the symbolic computations will be made available as
-supplementary material.
+interaction restricted to the structure $\phi GG$, whose kernels are expanded in tensor bases
+comprising 31 coefficients. The Noether identities, expanded order by order in the fields,
+yield a linear system that eliminates the $\phi\phi$ kernel and determines the remaining
+coefficients up to an overall normalization, recovering the Goldberg--Palatini action. Since
+the connection can be eliminated exactly, this also fixes the complete second-order action,
+with its infinite set of graviton vertices. No energy--momentum tensor is chosen to guide the
+self-coupling, and uniqueness holds within the assumed class of actions. The kernel bases,
+the identities and the solution are given in appendices, and the symbolic computations are
+publicly available.
 \end{abstract}
 
 \maketitle
@@ -85,140 +82,90 @@ vertex in noncommutative space, where the closed form of the action is not avail
 the invariance under a restricted class of coordinate transformations.
 
 In this work we apply this strategy to the first-order gravitational variables $\phi^{\mu\nu}$
-and $G^{\lambda}{}_{\mu\nu}$. The former is the perturbation of the contravariant metric
-density, while the latter is a trace-adjusted connection treated as an independent field. The
+and $G^{\lambda}{}_{\mu\nu}$, the perturbation of the contravariant metric density and a
+trace-adjusted connection treated as an independent field. The
 same strategy applies in the metric formulation, where the field-dependent part of the
 transformation is essential: invariance under the linearized transformations alone fixes
 only part of each vertex, whereas the full transformation determines the three-graviton
 vertex from the quadratic term, up to total derivatives~\cite{BrandtFrenkel1996}. The
-programme does not terminate there, however, since new vertices appear at every order. The first-order choice is adapted to the polynomial
-structure of the Goldberg--Palatini action~\cite{Goldberg1958,Palatini1919,Ferraris1982} and
-to its use in perturbative gravity~\cite{BrandtMcKeon2016}. We restrict the action to quadratic kernels of
+programme does not terminate there, however, since new vertices appear at every order. The
+first-order choice is adapted to the polynomial structure of the Goldberg--Palatini
+action~\cite{Goldberg1958,Palatini1919,Ferraris1982} and to its use in perturbative
+gravity~\cite{BrandtMcKeon2016}. We restrict the action to quadratic kernels of
 prescribed derivative order and to a derivative-free cubic interaction of the form $\phi GG$,
 expand the kernels in tensor bases, and impose the Noether identities order by order in the
 fields; the determination of the action then reduces to a finite system of linear constraints on 31
-coefficients, which is solved completely.
-
-The result is not confined to the first-order theory. The field equation of $G$ is
-algebraic, so once the first-order action is fixed the connection can be eliminated
-exactly, for $d>2$ and nondegenerate metric density: $G$ is expressed through
-$\partial\phi$ by inverting the kernel of the $GG$ term, which is linear in
-$\eta+\kappa\phi$, and substituting back gives the second-order action as a quadratic form
-in $\partial\phi$ whose kernel is that inverse, Eq.~(3.13) of Ref.~\cite{BrandtMcKeon2016}.
-The formal perturbative expansion of the inverse, Eq.~(3.18) there,
-then generates the complete infinite set of graviton self-interaction vertices of the metric
-formulation. The finite determination of the first-order action therefore fixes all of them.
+coefficients, which is solved completely. Because the field equation of $G$ is algebraic, the
+connection can then be eliminated exactly, so the finite determination of the first-order
+action also fixes the infinite set of graviton vertices of the metric
+formulation~\cite{BrandtMcKeon2016}.
 
 Our objective is to determine the freedom remaining in this ansatz after the Noether
 identities are imposed. The transformation laws, the field content, the derivative bounds and
-the restriction on the cubic interaction are inputs to the construction. Accordingly, the
-uniqueness statement concerns this specified class of actions; it does not assert that
+the restriction on the cubic interaction are inputs to the construction; the
+uniqueness statement concerns this specified class of actions and does not assert that
 diffeomorphism invariance alone selects Einstein gravity among all local gravitational
 theories.
 
-The present construction complements the self-coupling approach of
-Refs.~\cite{Deser1970,Deser2010} by determining the admissible action kernels directly from
-prescribed nonlinear gauge transformations. Its contribution is an explicit finite-dimensional
-uniqueness analysis within the stated ansatz, identifying which Noether identities remove
-each remaining freedom. The self-coupling procedure has
-recently been extended to metric-affine theories, with the connection as an independent
-field~\cite{Delhom2023}; that analysis identifies the choice of energy--momentum tensor as
-the source of the ambiguities, notes that in the first-order construction of
-Ref.~\cite{Deser1970} the connection is an auxiliary field that is not itself bootstrapped,
-and observes that the existing arguments establish existence rather than uniqueness. The
-present construction, within the stated ansatz, addresses these three points: no
-energy--momentum tensor is chosen, which is the point at issue in
-Ref.~\cite{Padmanabhan2008}, the geometrical input being retained explicitly in the
-transformation laws; the variations of both independent fields enter the Noether identity
-and are included in the determination; and uniqueness is established within the stated
-class. The idea of using the consistency of the gauge identities instead of self-coupling
-goes back to Wald~\cite{Wald1986}, who analyzed the consistent nonlinear extensions through
-identities among the field equations; here the nonlinear transformations are prescribed and
-the compatible action is determined within a finite ansatz. The result concerns the bulk action modulo total derivatives and
-does not determine boundary terms.
-
-The distinction can also be expressed in terms of Noether's two theorems. Energy--momentum
-self-coupling constructions combine the conserved current associated with global translations
-with the consistency conditions imposed by the gauge identities of the spin-two field. Here
-we impose the off-shell identities of Noether's second theorem directly, without constructing
-an energy--momentum tensor as an intermediate step. Translation symmetry is already contained
-in the prescribed transformations. The difference therefore lies in the organization and
-inputs of the procedure: the nonlinear transformations are specified at the outset,
-and the compatible action is determined within the chosen ansatz.
+The construction complements the self-coupling approach of
+Refs.~\cite{Deser1970,Deser2010}. Self-coupling combines the conserved current of global
+translations with the consistency of the gauge identities of the spin-two field, and thus
+requires the choice of an energy--momentum tensor, the point at issue in
+Ref.~\cite{Padmanabhan2008}. Its recent extension to metric-affine theories~\cite{Delhom2023}
+identifies this choice as the source of the ambiguities, notes that in the first-order
+construction of Ref.~\cite{Deser1970} the connection is an auxiliary field that is not itself
+bootstrapped, and observes that the existing arguments establish existence rather than
+uniqueness. Here no energy--momentum tensor is constructed: the off-shell identities of
+Noether's second theorem are imposed directly, the geometrical input being retained in the
+transformation laws; the variations of both independent fields enter the identities; and
+uniqueness is established within the stated class. The idea of using the consistency of the
+gauge identities instead of self-coupling goes back to Wald~\cite{Wald1986}, who analyzed the
+consistent nonlinear extensions through identities among the field equations; here the
+nonlinear transformations are prescribed and the compatible action is determined within a
+finite ansatz. The result concerns the bulk action modulo total derivatives and does not
+determine boundary terms.
 
 The paper is organized so that the main text carries the logic of the construction and the
 appendices carry its details. Section~\ref{sec:variables} fixes the fields and their
 transformations, Section~\ref{sec:ansatz} the ansatz and its counting, Section~\ref{sec:identities}
 the identities and their decomposition into sectors, Section~\ref{sec:solution} the solution,
-and Section~\ref{sec:checks} the checks and the scope of the result. Figure~\ref{fig:flow}
-summarizes the procedure. Explicit tensors, bases, identities and kernels are collected in
-Appendices~\ref{app:momentum}--\ref{app:kernels}, and Appendix~\ref{app:implementation}
-describes the symbolic implementation and how to reproduce every check.
+and Section~\ref{sec:checks} the reduction to the metric formulation and the scope of the
+result. Figure~\ref{fig:flow} summarizes the procedure. The notation and the derivation of the
+transformation laws are collected in Appendix~\ref{app:transf}; explicit tensors, bases,
+identities and kernels in Appendices~\ref{app:momentum}--\ref{app:kernels}; and
+Appendix~\ref{app:implementation} describes the symbolic implementation and how to reproduce
+every check.
 
 % =======================================================================
 \section{First-order variables and gauge transformations}
 \label{sec:variables}
 % =======================================================================
 
-\paragraph{Conventions.} Units are $\hbar=c=1$, so that dimensions are mass dimensions. We
-work in $d$ spacetime dimensions with a flat metric $\eta_{\mu\nu}$ of signature
-$(+,-,\dots,-)$; the algebraic tensor identities used below are polynomial identities in
-$\eta$ and the momenta and are independent of the signature, and for generic $d$ the density
-$\sqrt{-g}$ is to be read as $\sqrt{|g|}$. Index symmetrization is \emph{not} normalized:
-$h^{(\mu\nu)}\equiv h^{\mu\nu}+h^{\nu\mu}$. Fourier transforms are
-$\p^{\mu\nu}(p)=\int d^dx\,e^{ip\cdot x}\phi^{\mu\nu}(x)$, and likewise for
-$\G^{\lambda}{}_{\mu\nu}$ and for the gauge parameter $\tomega^\mu$, so that
-$\phi^{\mu\nu}(x)=\ip{p}e^{-ip\cdot x}\p^{\mu\nu}(p)$ with $\ip{p}\equiv\int d^dp/(2\pi)^d$;
-a derivative acting on a field of momentum $p$ becomes $-ip_\mu$, and a product of fields
-becomes a convolution. Table~\ref{tab:notation} lists the objects used throughout.
-
-\paragraph{Compact notation.} In the main text we suppress indices. A field carries its
-momentum as a subscript: $\phi_p$ stands for the whole tensor
-$\p^{\mu\nu}(p)$, $G_p$ for $\G^{\lambda}{}_{\mu\nu}(p)$, $\omega_p$ for $\tomega^\mu(p)$;
-the index structure of each is that of Table~\ref{tab:notation}. The objects that act on
-fields are of three kinds.
+\paragraph{Conventions.}
 \begin{itemize}
-\item A \emph{kernel} $K$ is a multilinear form on fields: $K(A,B)$ or $K(A,B,C)$ denotes the
-full contraction of the indices of each argument with the corresponding index group of the kernel $K$.
-For instance,
-$K^{\phi G}(\phi_{-p},G_p)\equiv\p^{\mu\nu}(-p)\,K^{\phi G}_{\mu\nu\lambda}{}^{\rho\sigma}(p)\,\G^{\lambda}{}_{\rho\sigma}(p)$.
-\item A \emph{linear map} $D(p)$ takes the gauge parameter to a field:
-$D_{\phi^0}(p)\,\omega_p\equiv D_{\phi^0}{}^{\mu\nu}{}_{\alpha}(p)\,\tomega^\alpha(p)$ is a
-symmetric tensor, and likewise $D_{G^0}(p)\,\omega_p$. The label of a $D$ names the field it
-produces and the order in $\kappa$ of the term of the transformation from which it arises:
-$D_{\phi^0}$ is the field-independent part of $\delta\phi$, $D_{\phi^1}$ the part linear in
-the fields, Eq.~\eqref{eq:dmom} below.
-\item A \emph{bilinear map} $D(p,q)$ takes a field and the gauge parameter to a field,
-\[
-D_{\phi^1}(p,q)(\phi_{p-q},\omega_q)\equiv\p^{\alpha\beta}(p-q)\,\tomega^\rho(q)\,
-D_{\phi^1}{}^{\mu\nu}{}_{\alpha\beta\rho}(p,q),
-\]
-and likewise $D_{G^1}(p,q)(G_{p-q},\omega_q)$.
+\item Units are $\hbar=c=1$, so that dimensions are mass dimensions; the objects used
+throughout and their dimensions are listed in Table~\ref{tab:notation} of
+Appendix~\ref{app:transf}.
+\item Spacetime has $d$ dimensions and flat metric $\eta_{\mu\nu}$ of signature
+$(+,-,\dots,-)$. The algebraic tensor identities used below are polynomial in $\eta$ and the
+momenta and do not depend on the signature; for generic $d$, $\sqrt{-g}$ is read as
+$\sqrt{|g|}$.
+\item Index symmetrization is not normalized: $h^{(\mu\nu)}\equiv h^{\mu\nu}+h^{\nu\mu}$.
+\item Fourier transforms are $\p^{\mu\nu}(p)=\int d^dx\,e^{ip\cdot x}\phi^{\mu\nu}(x)$, and
+likewise for $\G^{\lambda}{}_{\mu\nu}$ and for the gauge parameter $\tomega^\mu$, with
+$\ip{p}\equiv\int d^dp/(2\pi)^d$. A derivative acting on a field of momentum $p$ becomes
+$-ip_\mu$, and a product of fields becomes a convolution.
 \end{itemize}
-The index structure of every object is given in Table~\ref{tab:kernels} and in the
-appendices; the compact form is only a shorthand for those expressions.
 
-\begin{table}[htb]
-\centering\scriptsize
-\begin{tabular}{@{}lllcc@{}}
-\toprule
-Symbol & Meaning & Indices & Momenta & Dimension \\
-\midrule
-$\kappa$ & gravitational coupling & & & $(2-d)/2$ \\
-$\phi^{\mu\nu}$; $\phi_p$ & density perturbation, Eq.~\eqref{eq:Gdef} & $\mu\nu$ symmetric & one & $(d-2)/2$; $-(d+2)/2$ \\
-$G^{\lambda}{}_{\mu\nu}$; $G_p$ & trace-adjusted connection, Eq.~\eqref{eq:Gdef} & $\mu\nu$ symmetric & one & $d/2$; $-d/2$ \\
-$\omega^{\mu}$; $\omega_p$ & gauge parameter & vector & one & $(d-4)/2$; $-(d+4)/2$ \\
-$D_{\phi^0}(p)$, $D_{G^0}(p)$ & $\delta^{(0)}\phi$, $\delta^{(0)}G$ as maps on $\omega$ & App.~\ref{app:momentum} & $p$ & $1$, $2$ \\
-$D_{\phi^1}(p,q)$, $D_{G^1}(p,q)$ & $\delta^{(1)}\phi$, $\delta^{(1)}G$ as maps on (field,\,$\omega$) & App.~\ref{app:momentum} & $p,q$ & $1$, $1$ \\
-$K^{\phi\phi}$, $K^{\phi G}$, $K^{GG}$ & quadratic kernels of $S_2$ & Table~\ref{tab:kernels} & $p$ & $2$, $1$, $0$ \\
-$K^{\phi GG}$ & cubic kernel of $S_3$ & Table~\ref{tab:kernels} & none & $0$ \\
-$\W^{\phi},\W^{G},\W^{31},\dots,\W^{34}$ & the six Noether identities & App.~\ref{app:identities} & $p$; $p_i$ & \\
-\bottomrule
-\end{tabular}
-\caption{Notation and mass dimensions. For the fields and the gauge parameter the two entries
-in the last column refer to configuration and momentum space; $[\ip{p}]=d$.}
-\label{tab:notation}
-\end{table}
+\paragraph{Compact notation.} In the main text indices are suppressed and a field carries
+its momentum as a subscript: $\phi_p$, $G_p$ and $\omega_p$ stand for $\p^{\mu\nu}(p)$,
+$\G^{\lambda}{}_{\mu\nu}(p)$ and $\tomega^\mu(p)$. A kernel $K(A,B)$ or $K(A,B,C)$ denotes the
+full contraction of each argument with the corresponding index group of $K$, for instance
+$K^{\phi G}(\phi_{-p},G_p)\equiv\p^{\mu\nu}(-p)\,K^{\phi G}_{\mu\nu\lambda}{}^{\rho\sigma}(p)\,\G^{\lambda}{}_{\rho\sigma}(p)$.
+The field-independent and field-linear parts of the transformations are written as a linear
+map $D_{\phi^0}(p)\,\omega_p$ and a bilinear map $D_{\phi^1}(p,q)(\phi_{p-q},\omega_q)$, and
+likewise for $G$; the label names the field produced and the order in $\kappa$
+(Eq.~\eqref{eq:dmom} below and Appendix~\ref{app:momentum}).
 
 \paragraph{Fields.} The independent fields are the perturbation of the Goldberg
 density~\cite{Goldberg1958} and
@@ -247,11 +194,9 @@ $g_\nu\equiv G^{\sigma}{}_{\nu\sigma}$, and substituting back,
 Eqs.~(6)--(8) of Ref.~\cite{BrandtMcKeon2015}. The trace adjustment is what cancels the
 $\partial_\nu\Gamma^{\lambda}{}_{\mu\lambda}$ term of $h^{\mu\nu}R_{\mu\nu}(\Gamma)$ against
 the trace part of $\partial_\lambda\Gamma^{\lambda}{}_{\mu\nu}$, leaving the single derivative
-term of Eq.~\eqref{eq:result} below. With
-$[\kappa]=(2-d)/2$ in mass units, $\kappa\phi$ is dimensionless, $[\phi]=(d-2)/2$, and
-$[G]=d/2$; in $d=4$, $[\phi]=1$ and $[G]=2$. Note that $G$ does not have the dimension of a
-connection: it is the trace-adjusted connection divided by $\kappa$, in the same way that
-$\phi$ is the metric perturbation divided by $\kappa$. The definitions in
+term of Eq.~\eqref{eq:result} below. Like $\phi$, which is the metric perturbation divided by
+$\kappa$, $G$ is the trace-adjusted connection divided by $\kappa$ and does not have the
+dimension of a connection. The definitions in
 Eqs.~\eqref{eq:Gdef}--\eqref{eq:GammaofG} serve only to fix the transformation laws below;
 from then on $\phi$ and $G$ are treated as independent fields, and no relation between $G$ and
 a metric is assumed.
@@ -269,9 +214,8 @@ $x^\mu\to x^\mu-\kappa\,\omega^\mu(x)$ the fields transform as
 +G^{\lambda}{}_{\rho(\mu}\partial_{\nu)}\omega^\rho\big]}_{\delta^{(1)}G^{\lambda}{}_{\mu\nu}}.
 \label{eq:dG}
 \end{align}
-The gauge parameter has $[\omega]=(d-4)/2$, so that it is dimensionless in $d=4$. The
-split into a field-independent contribution $\delta^{(0)}$ and a field-linear contribution
-$\kappa\delta^{(1)}$, of order $\kappa$, is what organizes the whole construction.
+The split into a field-independent contribution $\delta^{(0)}$ and a field-linear contribution
+$\kappa\delta^{(1)}$ is what organizes the whole construction.
 Eq.~\eqref{eq:dphi} follows from the transformation of $h^{\mu\nu}=\eta^{\mu\nu}+\kappa\phi^{\mu\nu}$
 as a tensor density of weight one, with the background $\eta^{\mu\nu}$ held fixed;
 Eq.~\eqref{eq:dG} follows from the transformation of an affine connection through
@@ -285,9 +229,7 @@ In momentum space the derivatives become momenta and $\delta^{(1)}$ becomes a co
 \delta G_p=D_{G^0}(p)\,\omega_p+\kappa\ip{q}D_{G^1}(p,q)\,(G_{p-q},\omega_q).
 \label{eq:dmom}
 \end{equation}
-This form makes the structure explicit: $\delta^{(0)}$ is a linear map on the gauge parameter,
-$\delta^{(1)}$ a bilinear map on the pair (field, gauge parameter). The four tensors
-$D_{\phi^0},D_{\phi^1},D_{G^0},D_{G^1}$ are listed in Appendix~\ref{app:momentum}.
+The four tensors $D_{\phi^0},D_{\phi^1},D_{G^0},D_{G^1}$ are listed in Appendix~\ref{app:momentum}.
 
 % =======================================================================
 \section{The action ansatz}
@@ -308,20 +250,18 @@ The quadratic part is the most general translation-invariant local expression wi
 coupling-power assignment and the parity-even tensor class specified below. The cubic part
 is restricted to the single structure $\phi GG$; this is an assumption, discussed below.
 
-\paragraph{Derivative counting.} The dimensions of the fields are fixed by the
-transformation laws: $\kappa\omega$ is a coordinate displacement, so $[\kappa\omega]=-1$,
-and Eqs.~\eqref{eq:dphi}--\eqref{eq:dG} then give $[\phi]=(d-2)/2$ and $[G]=d/2$, consistent
-with Eq.~\eqref{eq:Gdef} (see Table~\ref{tab:notation}). With these assignments $S$ carries no
-prefactor, and the ansatz prescribes the power of the coupling at each order in the fields,
-$\kappa^{n-2}$ in $S_n$. A local monomial with $a$ fields $\phi$, $b$ fields $G$ and $r$
-derivatives, multiplied by $\kappa^{a+b-2}$, then has mass dimension $d+r+b-2$, so that a
-dimensionless action requires $r+b=2$. This gives two derivatives for $K^{\phi\phi}$, one for $K^{\phi G}$ and none for $K^{GG}$;
-at cubic order it allows $\phi\phi\phi$ with two derivatives, $\phi\phi G$ with one and
-$\phi GG$ with none, and excludes $GGG$, which would require $r=-1$. The derivative bounds
-thus rest on locality, dimensional consistency and the coupling-power assignment; they do
-not by themselves bound the number of fields $\phi$. The cubic vertex $K^{\phi GG}$ is purely
-algebraic, which is the feature of the first-order formulation that makes the determination
-finite.
+\paragraph{Derivative counting.} Since $\kappa\omega$ is a coordinate displacement,
+$[\kappa\omega]=-1$, and Eqs.~\eqref{eq:dphi}--\eqref{eq:dG} give $[\phi]=(d-2)/2$ and
+$[G]=d/2$, with $[\kappa]=(2-d)/2$. The ansatz assigns the power $\kappa^{n-2}$ to $S_n$ and
+introduces no dimensionful constant other than $\kappa$; with an additional dimensionful
+parameter, terms with more derivatives could always be given the correct dimension, so this
+assumption is what bounds the derivative order. A local monomial with $a$ fields $\phi$, $b$
+fields $G$ and $r$ derivatives, multiplied by $\kappa^{a+b-2}$, has mass dimension $d+r+b-2$,
+so that a dimensionless action requires $r+b=2$: two derivatives in $K^{\phi\phi}$, one in
+$K^{\phi G}$ and none in $K^{GG}$; at cubic order $\phi\phi\phi$ with two, $\phi\phi G$ with
+one and $\phi GG$ with none, while $GGG$ is excluded. These bounds do not limit the number of
+fields $\phi$. The cubic vertex $K^{\phi GG}$ is purely algebraic, which is the feature of the
+first-order formulation that makes the determination finite.
 
 \paragraph{The cubic sector.} The restriction of $S_3$ to the structure $\phi GG$ is an
 assumption: the counting above also allows $\phi\phi G$ with one derivative and
@@ -329,15 +269,15 @@ $\phi\phi\phi$ with two, and both would keep the field equation of $G$ algebraic
 restriction is motivated by the polynomial structure of the Goldberg--Palatini action, in
 which the connection appears at most quadratically and the only derivative acts in the
 $\phi G$ term; it defines the class in which we investigate whether the Noether identities
-admit a completion terminating at cubic order. The uniqueness result of
-Section~\ref{sec:solution} is conditional on this restriction, and its relaxation is
-discussed in Section~\ref{sec:conclusions}.
+admit a completion terminating at cubic order, and the uniqueness result of
+Section~\ref{sec:solution} is conditional on it.
 
 \paragraph{Tensor bases.} Each kernel is expanded in a basis of tensors built from
 $\eta^{\mu\nu}$ and $p^\mu$, with the index symmetries inherited from the fields it
-multiplies; parity-odd structures involving the Levi-Civita tensor are not considered. The bases are generated by symmetrizing, under the index symmetries of each
-kernel, the tensor monomials, that is, the products of $\eta$'s and $p$'s with the required
-indices and degree in $p$; their linear independence is verified through Gram determinants
+multiplies; parity-odd structures involving the Levi-Civita tensor are not considered. The
+bases are generated by symmetrizing, under the index symmetries of each kernel, the tensor
+monomials, that is, the products of $\eta$'s and $p$'s with the required indices and degree
+in $p$; their linear independence is verified through Gram determinants
 (Appendix~\ref{app:bases}). Table~\ref{tab:kernels} gives the outcome. For $d\geq4$ the
 four bases are independent and contain $4+6+5+16=31$ unknown coefficients in total.
 
@@ -418,25 +358,32 @@ Each identity is turned into scalar equations by projecting it onto a basis of t
 the same index structure and momentum dependence; since the identity vanishes, so does every
 projection. Conversely, for an identity in the span of a projection basis with nondegenerate
 Gram matrix, the vanishing of all projections is equivalent to the vanishing of the identity;
-the one exception, $\W^{34}$ at $d=4$, is discussed in Appendix~\ref{app:identities}. In the identities with two or three momenta the momenta are identified,
-$p_1=p_2=p_3\equiv p$, so that every projection basis is built from $\eta$ and a single
-vector; the dimensions in Table~\ref{tab:identities} refer to these bases. Since an identity
-that holds for arbitrary momenta holds in particular for equal ones, the specialization can
-only weaken the system: it yields necessary conditions, never spurious ones, and the solution
-space of the specialized system contains that of the full one. The specialized system
-already has a one-dimensional solution space (Section~\ref{sec:solution}), and the
-Goldberg--Palatini action, which is invariant for arbitrary momenta, belongs to it; the two
-solution spaces therefore coincide and nothing is lost. The identification that establishes
-invariance for arbitrary momenta is discussed in Section~\ref{sec:checks}.
+the one exception, $\W^{34}$ at $d=4$, is discussed in Appendix~\ref{app:identities}.
+
+\paragraph{Identified momenta.} In the identities with two or three momenta the momenta are
+set equal to one another, $p_1=p_2=p_3\equiv p$, with $p$ itself arbitrary, so that every
+projection basis is built from $\eta$ and a single vector; the dimensions in
+Table~\ref{tab:identities} refer to these bases. $\W^{\phi}$ and $\W^{G}$ involve a single
+momentum and are used as they stand. The Noether identities hold as tensor identities for
+arbitrary momenta, in particular for equal ones, so the specialization can only weaken the
+system: it yields necessary conditions, never spurious ones, and the solution space of the
+specialized system contains that of the full one. The specialized system already has a
+one-dimensional solution space (Section~\ref{sec:solution}), spanned by the
+Goldberg--Palatini action. For this action the identities hold for arbitrary momenta, since
+$h^{\mu\nu}R_{\mu\nu}(\Gamma)$ is a scalar density under
+Eqs.~\eqref{eq:dphi}--\eqref{eq:dG} by construction and its variation is a total derivative,
+which integrates to zero for gauge parameters of compact support. The two solution spaces
+therefore coincide, and nothing is lost by the identification.
 
 % =======================================================================
 \section{Solution}
 \label{sec:solution}
 % =======================================================================
 
-The resulting linear system is solved in a sequence that follows the structure of
-Table~\ref{tab:identities}, and each step has a direct interpretation. The sequence is shown
-in Table~\ref{tab:flow}.
+The identities are generated and the resulting linear system is solved symbolically with
+FeynCalc~\cite{FeynCalc} in Mathematica~\cite{Mathematica} (Appendix~\ref{app:implementation}).
+The system is solved in a sequence that follows the structure of
+Table~\ref{tab:identities}, shown in Table~\ref{tab:flow}.
 
 \begin{table}[htb]
 \centering
@@ -458,13 +405,10 @@ coefficients are expressed in terms of which depends on the parametrization chos
 
 Step~1 shows that the identities force the purely metric kernel to vanish,
 $K^{\phi\phi}=0$, before any comparison with a known action: in this formalism the
-dynamics of $\phi$ is carried entirely by its coupling to $G$. After $K^{\phi\phi}=0$ is
-imposed, the quadratic identities of Step~2 leave two parameters in the quadratic action,
-the overall constant and one relative coefficient. Step~3 removes the remaining relative
-freedom: the cubic identity in the $\phi G$ sector fixes that coefficient and expresses all
-sixteen coefficients of $K^{\phi GG}$ in terms of the overall constant. Step~4 confirms that
-the two remaining identities impose no further condition. The solution is therefore unique up to an overall
-constant.
+dynamics of $\phi$ is carried entirely by its coupling to $G$. Steps~2 and~3 then leave only
+the overall constant, the cubic identity in the $\phi G$ sector fixing both the relative
+coefficient left in $S_2$ and all sixteen coefficients of $K^{\phi GG}$, and Step~4 imposes
+no further condition. The solution is therefore unique up to an overall constant.
 
 Transforming back to configuration space, and writing $g_\mu\equiv G^{\sigma}{}_{\mu\sigma}$ for
 the trace of $G$ and $\operatorname{tr}(G_\mu G_\nu)\equiv G^{\lambda}{}_{\mu\sigma}G^{\sigma}{}_{\nu\lambda}$
@@ -484,55 +428,35 @@ identities is dimensionless.
 The explicit momentum-space kernels are given in Appendix~\ref{app:kernels}.
 
 % =======================================================================
-\section{Checks and scope}
+\section{Reduction to the metric formulation and scope}
 \label{sec:checks}
 % =======================================================================
 
-\paragraph{Generic momenta.} The solution of Section~\ref{sec:solution} was obtained with
-the momenta of the cubic identities identified, and the argument of
-Section~\ref{sec:identities} shows that nothing is lost provided the resulting action is
-indeed invariant for arbitrary momenta. That it is follows from its identification with
-$h^{\mu\nu}R_{\mu\nu}(\Gamma)$ in Section~\ref{sec:solution}, a scalar density under the
-transformations \eqref{eq:dphi}--\eqref{eq:dG} by construction: its variation is a total
-derivative, so the action is invariant for gauge parameters of compact support, or for
-boundary conditions that remove the boundary contribution; this closes the argument. The
-specialization enters only the cubic identities $\W^{31}$--$\W^{34}$; $\W^{\phi}$ and
-$\W^{G}$ involve a single momentum and are used as they stand.
-
 \paragraph{Reduction to the metric formulation.} Writing the $GG$ term of Eq.~\eqref{eq:result}
-as $\tfrac12 M(\eta+\kappa\phi)(G,G)$, with $M(h)$ the bilinear form
-$M(h)(G,G)=2h^{\mu\nu}\big(-\operatorname{tr}(G_\mu G_\nu)+\tfrac{1}{d-1}g_\mu g_\nu\big)$, linear
-in $h$, the field equation of $G$ is algebraic, $M(\eta+\kappa\phi)\,G=\partial\phi$; for
-$d>2$ and nondegenerate $h$ the form $M(h)$ is invertible, and the solution
-$G=M^{-1}(\eta+\kappa\phi)\,\partial\phi$ substituted back gives
+as $\tfrac12 M(\eta+\kappa\phi)(G,G)$, with
+$M(h)(G,G)=2h^{\mu\nu}\big(-\operatorname{tr}(G_\mu G_\nu)+\tfrac{1}{d-1}g_\mu g_\nu\big)$
+linear in $h$, the field equation of $G$ is algebraic, $M(\eta+\kappa\phi)\,G=\partial\phi$.
+For $d>2$ and nondegenerate $h$ its solution, substituted back, gives
 \begin{equation}
 S=-\tfrac12\int d^dx\;M^{-1}(\eta+\kappa\phi)\big(\partial\phi,\partial\phi\big),
 \label{eq:second}
 \end{equation}
-the second-order Einstein--Hilbert action in the Goldberg variable, Eq.~(3.13) of
-Ref.~\cite{BrandtMcKeon2016}, to all orders in $\phi$, modulo a boundary term and with the
-normalization of Section~\ref{sec:solution}. Since $M$ is linear in its argument,
-the inverse has the formal perturbative expansion
+the second-order Einstein--Hilbert action in the Goldberg variable to all orders in $\phi$,
+modulo a boundary term, Eq.~(3.13) of Ref.~\cite{BrandtMcKeon2016}. The formal expansion
+$M^{-1}(\eta+\kappa\phi)=M^{-1}(\eta)-\kappa\,M^{-1}(\eta)M(\phi)M^{-1}(\eta)+\dots$,
+Eq.~(3.18) there, generates the quadratic action and every $n$-point vertex; with
+$G_0\equiv M^{-1}(\eta)\,\partial\phi$, the cubic one is
 \begin{equation}
-M^{-1}(\eta+\kappa\phi)=M^{-1}(\eta)-\kappa\,M^{-1}(\eta)M(\phi)M^{-1}(\eta)+\dots,
-\label{eq:inverse-expansion}
-\end{equation}
-Eq.~(3.18) of the same reference: inserted in Eq.~\eqref{eq:second}, the first term gives
-the quadratic graviton action and each further term an $n$-point vertex. In particular,
-with $G_0\equiv M^{-1}(\eta)\,\partial\phi$ the solution of the field equation of $G$ at
-lowest order, the second term of Eq.~\eqref{eq:inverse-expansion} gives the cubic term
-\begin{equation}
-S^{(3)}=\frac{\kappa}{2}\int d^dx\;M(\phi)\big(G_0,G_0\big),
+S^{(3)}=\frac{\kappa}{2}\int d^dx\;M(\phi)\big(G_0,G_0\big).
 \label{eq:cubicvertex}
 \end{equation}
-the cubic interaction in closed form. The infinite tower of self-interactions of the metric formulation is
-thus fixed by the three kernels of the first-order action.
 
 The reduction has been checked symbolically at quadratic and cubic order against the
 Lagrangians of Capper, Leibbrandt and Ram\'on Medrano (CLM)~\cite{CLM1973}, Eqs.~(2.10) and
 (2.16) of that reference, which are written in the same metric-density perturbation
 $\sqrt{-g}\,g^{\mu\nu}=\eta^{\mu\nu}+\kappa\phi^{\mu\nu}$. Starting from the bootstrap
-kernels, the accompanying xAct notebook (Appendix~\ref{app:implementation}) derives
+kernels, the accompanying notebook, written with xAct~\cite{xAct,xPerm,xTras}
+(Appendix~\ref{app:implementation}), derives
 $M_0^{-1}$, with $M_0\equiv M(\eta)$, verifies the left and right inverse relations,
 constructs $G_0=M_0^{-1}\partial\phi$, and evaluates the quadratic Lagrangian from
 Eq.~\eqref{eq:second} and the cubic one from Eq.~\eqref{eq:cubicvertex}. The conventions
@@ -557,16 +481,14 @@ under boundary conditions that remove the integral of $\partial_aJ^a$. The corre
 three-graviton vertices therefore agree once the action, Fourier and symmetrization
 conventions are matched, without a separate transcription of CLM's momentum-space vertex.
 
-\paragraph{Scope.} The inputs of the construction are the field content, the transformation
-laws \eqref{eq:dphi}--\eqref{eq:dG}, the bounds on derivatives, and the restriction of the
-cubic sector to $\phi GG$. The result is uniqueness within that class. It does not establish
-uniqueness in a class containing further powers of the fields, additional derivatives, or
-independent dimensionful couplings. The overall constant is not fixed by the homogeneous
-invariance conditions; it requires an external normalization, such as matching the
-weak-field equations to the Newtonian limit with a specified normalization of the matter
-source, which for a fixed convention for $\kappa$ determines it. The construction is classical
-throughout; whether the first- and second-order formulations remain equivalent beyond tree
-level, a question studied in Ref.~\cite{BrandtMcKeon2016}, is not addressed here.
+\paragraph{Scope.} Uniqueness holds within the class defined by the inputs listed in
+Section~\ref{sec:introduction}; it is not established in a class containing further powers of
+the fields, additional derivatives, or independent dimensionful couplings. The overall
+constant is not fixed by the homogeneous invariance conditions; it requires an external
+normalization, such as matching the weak-field equations to the Newtonian limit with a
+specified normalization of the matter source. The construction is classical throughout;
+whether the first- and second-order formulations remain equivalent beyond tree level, a
+question studied in Ref.~\cite{BrandtMcKeon2016}, is not addressed here.
 
 \begin{figure}[htb]
 \centering
@@ -610,29 +532,20 @@ In particular, the identities eliminate the quadratic $\phi\phi$ kernel and fix 
 coefficients of the mixed $\phi G$ term, the algebraic $GG$ term, and the cubic $\phi GG$
 interaction. The resulting structure is that of first-order Einstein gravity.
 
-Individual Noether identities can leave components of a kernel undetermined, since they
-constrain tensor contractions. Uniqueness here follows from imposing all identities
-simultaneously within the chosen ansatz: the field-dependent transformations link the
-quadratic and cubic sectors and remove the freedom left by the quadratic identities alone.
-The resulting homogeneous linear system has a one-dimensional solution space, corresponding
-to the overall normalization of the action. Any further independent solution would define
-another invariant action in the same class. Thus uniqueness is a property of this restricted
+Individual Noether identities constrain only tensor contractions and can leave components of
+a kernel undetermined. Uniqueness here follows from imposing all identities simultaneously:
+the field-dependent transformations link the quadratic and cubic sectors and remove the
+freedom left by the quadratic identities alone, and the resulting homogeneous linear system
+has a one-dimensional solution space. Uniqueness is thus a property of this restricted
 system, not a general consequence of Noether identities. The connection is not a field
 exempt from the procedure: its variation enters every sector of the identity except the
-$\phi\phi$ one, and the coupled identities determine the kernels involving it; once the
-preceding constraints are imposed, the cubic vertex is fixed by the sector that couples the
-two fields, $\W^{32}$. The solution was obtained with the
-momenta of the cubic identities identified; its invariance for arbitrary momenta follows
-from its identification with the Goldberg--Palatini action.
+$\phi\phi$ one, and once the preceding constraints are imposed the cubic vertex is fixed by
+the sector that couples the two fields, $\W^{32}$.
 
-For $d>2$ and nondegenerate metric density the algebraic equation for $G$ has a unique
-solution, so fixing the first-order action fixes the second-order one completely.
-Eliminating $G$ yields the metric action as the quadratic form \eqref{eq:second}, modulo a
-boundary term and with the overall normalization inherited from the first-order action, and
-the formal expansion of its kernel in powers of $\kappa$ produces every graviton
-self-interaction vertex of the second-order theory. A construction that closes at cubic
-order in the first-order variables therefore determines an infinite set of vertices in the
-metric variables; this is the practical content of the classical equivalence between the two
+Since the equation for $G$ is algebraic and uniquely solvable for $d>2$ and nondegenerate
+metric density, a construction that closes at cubic order in the first-order variables
+determines, through Eq.~\eqref{eq:second}, the infinite set of vertices of the metric
+formulation. This is the practical content of the classical equivalence between the two
 formulations, and it is what makes the first-order variables the natural setting for the
 determination.
 
@@ -652,116 +565,102 @@ action-level version with tensor bases would provide a direct check of the metho
 actions would allow it to probe a broader space of gauge-invariant dynamics.
 
 \begin{acknowledgments}
-\todo{Funding: CNPq grant of F.T.B.; PUB/USP scholarship of A.C.B.C.}
-In preparing this manuscript the authors used AI language models (Claude, Anthropic, and
-Codex, OpenAI) as editing and programming assistants: for revising the English text, for
+\todo{Funding agencies and grant numbers, to be supplied by the authors (CNPq grant of
+F.T.B.; PUB/USP scholarship of A.C.B.C.; others?).}
+In preparing this manuscript the authors used AI tools as editing, research and programming
+assistants: for searching the literature, for revising the English text, for
 organizing the appendices, and for writing and debugging parts of the symbolic-computation
 notebooks and scripts. All physics content, derivations and checks were carried out and
-verified by the authors, who take full responsibility for the paper.
+verified by the authors, who checked every reference against the original source and take
+full responsibility for the paper.
 \end{acknowledgments}
 
 % =======================================================================
 \appendix
 % =======================================================================
 
-\section{Derivation of the transformation laws}
+\section{Notation and transformation laws}
 \label{app:transf}
 
-This appendix derives Eqs.~\eqref{eq:dphi} and \eqref{eq:dG} from the transformation
-properties of $g_{\mu\nu}$ and $\Gamma^{\lambda}{}_{\mu\nu}$ under coordinate changes. They are Eqs.~(17b) and (18) of
-Ref.~\cite{BrandtMcKeon2015}, whose Eq.~(17a) is the transformation of $h^{\mu\nu}$ itself,
-Eq.~\eqref{eq:dh} below; the parameter $\theta$ of that reference is $-\kappa\omega$ here, and
-that reference sets $\kappa=1$.
+Table~\ref{tab:notation} lists the objects used in the main text, with their index
+structure, momentum dependence and mass dimension.
 
-\paragraph{Conventions.} Under the infinitesimal coordinate change
-$x'^\mu=x^\mu-\varepsilon^\mu(x)$ we define the variation of a field as
-$\delta T(x)\equiv T'(x)-T(x)$. For a tensor this is the Lie derivative along $\varepsilon$,
-$\delta T=\mathcal{L}_\varepsilon T$; for the objects needed below,
-\begin{align}
-\mathcal{L}_\varepsilon V^\mu&=\varepsilon^\rho\partial_\rho V^\mu-V^\rho\partial_\rho\varepsilon^\mu,\qquad
-\mathcal{L}_\varepsilon T_\nu=\varepsilon^\rho\partial_\rho T_\nu+T_\rho\partial_\nu\varepsilon^\rho,\\
-\mathcal{L}_\varepsilon X^{\lambda}{}_{\mu\nu}&=\varepsilon^\rho\partial_\rho X^{\lambda}{}_{\mu\nu}
+\begin{table}[htb]
+\centering\scriptsize
+\begin{tabular}{@{}lllcc@{}}
+\toprule
+Symbol & Meaning & Indices & Momenta & Dimension \\
+\midrule
+$\kappa$ & gravitational coupling & & & $(2-d)/2$ \\
+$\phi^{\mu\nu}$; $\phi_p$ & density perturbation, Eq.~\eqref{eq:Gdef} & $\mu\nu$ symmetric & one & $(d-2)/2$; $-(d+2)/2$ \\
+$G^{\lambda}{}_{\mu\nu}$; $G_p$ & trace-adjusted connection, Eq.~\eqref{eq:Gdef} & $\mu\nu$ symmetric & one & $d/2$; $-d/2$ \\
+$\omega^{\mu}$; $\omega_p$ & gauge parameter & vector & one & $(d-4)/2$; $-(d+4)/2$ \\
+$D_{\phi^0}(p)$, $D_{G^0}(p)$ & $\delta^{(0)}\phi$, $\delta^{(0)}G$ as maps on $\omega$ & App.~\ref{app:momentum} & $p$ & $1$, $2$ \\
+$D_{\phi^1}(p,q)$, $D_{G^1}(p,q)$ & $\delta^{(1)}\phi$, $\delta^{(1)}G$ as maps on (field,\,$\omega$) & App.~\ref{app:momentum} & $p,q$ & $1$, $1$ \\
+$K^{\phi\phi}$, $K^{\phi G}$, $K^{GG}$ & quadratic kernels of $S_2$ & Table~\ref{tab:kernels} & $p$ & $2$, $1$, $0$ \\
+$K^{\phi GG}$ & cubic kernel of $S_3$ & Table~\ref{tab:kernels} & none & $0$ \\
+$\W^{\phi},\W^{G},\W^{31},\dots,\W^{34}$ & the six Noether identities & App.~\ref{app:identities} & $p$; $p_i$ & \\
+\bottomrule
+\end{tabular}
+\caption{Notation and mass dimensions. For the fields and the gauge parameter the two entries
+in the last column refer to configuration and momentum space; $[\ip{p}]=d$.}
+\label{tab:notation}
+\end{table}
+
+The transformation laws \eqref{eq:dphi} and \eqref{eq:dG} are Eqs.~(17b) and (18) of
+Ref.~\cite{BrandtMcKeon2015}, where $\kappa=1$ and the parameter $\theta$ is $-\kappa\omega$
+here. We sketch their derivation. Under $x'^\mu=x^\mu-\varepsilon^\mu(x)$ the variation
+$\delta T(x)\equiv T'(x)-T(x)$ of a tensor is its Lie derivative $\mathcal{L}_\varepsilon T$;
+for a $(1,2)$ tensor,
+\begin{equation}
+\mathcal{L}_\varepsilon X^{\lambda}{}_{\mu\nu}=\varepsilon^\rho\partial_\rho X^{\lambda}{}_{\mu\nu}
 -X^{\rho}{}_{\mu\nu}\partial_\rho\varepsilon^\lambda
 +X^{\lambda}{}_{\rho\nu}\partial_\mu\varepsilon^\rho
-+X^{\lambda}{}_{\mu\rho}\partial_\nu\varepsilon^\rho.
++X^{\lambda}{}_{\mu\rho}\partial_\nu\varepsilon^\rho ,
 \label{eq:lie12}
-\end{align}
-$\mathcal{L}_\varepsilon$ is linear and obeys the Leibniz rule, and it annihilates the
-Kronecker delta: $\mathcal{L}_\varepsilon\delta^\lambda_\mu
-=-\delta^{\rho}_{\mu}\partial_\rho\varepsilon^\lambda+\delta^{\lambda}_{\rho}\partial_\mu\varepsilon^\rho=0$.
-At the end we set $\varepsilon=\kappa\omega$, which is the parametrization of
-Section~\ref{sec:variables}.
+\end{equation}
+and $\mathcal{L}_\varepsilon$ annihilates the Kronecker delta.
 
-\paragraph{The metric density.} From $\delta g_{\mu\nu}=\mathcal{L}_\varepsilon g_{\mu\nu}$
-and $\delta g^{\mu\nu}=-g^{\mu\alpha}g^{\nu\beta}\delta g_{\alpha\beta}$ one has
-$\delta g^{\mu\nu}=\varepsilon^\rho\partial_\rho g^{\mu\nu}-g^{\rho\nu}\partial_\rho\varepsilon^\mu
--g^{\mu\rho}\partial_\rho\varepsilon^\nu$, and from
-$\delta\sqrt{-g}=\tfrac12\sqrt{-g}\,g^{\alpha\beta}\delta g_{\alpha\beta}$ together with
-$\partial_\rho\sqrt{-g}=\tfrac12\sqrt{-g}\,g^{\alpha\beta}\partial_\rho g_{\alpha\beta}$,
-$\delta\sqrt{-g}=\varepsilon^\rho\partial_\rho\sqrt{-g}+\sqrt{-g}\,\partial_\rho\varepsilon^\rho$.
-The product rule then gives, for $h^{\mu\nu}\equiv\sqrt{-g}\,g^{\mu\nu}$,
+\paragraph{The metric density.} $h^{\mu\nu}\equiv\sqrt{-g}\,g^{\mu\nu}$ is a contravariant
+tensor density of weight one,
 \begin{equation}
 \delta h^{\mu\nu}=\partial_\rho\big(h^{\mu\nu}\varepsilon^\rho\big)
 -h^{\rho\nu}\partial_\rho\varepsilon^\mu-h^{\mu\rho}\partial_\rho\varepsilon^\nu ,
 \label{eq:dh}
 \end{equation}
-the transformation of a contravariant tensor density of weight one. Holding the background
-$\eta^{\mu\nu}$ fixed, so that $\delta h^{\mu\nu}=\kappa\,\delta\phi^{\mu\nu}$, we insert
-$h^{\mu\nu}=\eta^{\mu\nu}+\kappa\phi^{\mu\nu}$ and $\varepsilon=\kappa\omega$ and divide by
-$\kappa$,
-\begin{equation}
-\delta\phi^{\mu\nu}=\eta^{\mu\nu}\partial\!\cdot\!\omega-\partial^{(\mu}\omega^{\nu)}
-+\kappa\Big[\partial_\rho\big(\phi^{\mu\nu}\omega^\rho\big)-\partial_\rho\omega^{(\mu}\phi^{\nu)\rho}\Big],
-\end{equation}
-which is Eq.~\eqref{eq:dphi}.
+which is Eq.~(17a) of Ref.~\cite{BrandtMcKeon2015}. Holding the background $\eta^{\mu\nu}$
+fixed, so that $\delta h^{\mu\nu}=\kappa\,\delta\phi^{\mu\nu}$, inserting
+$h^{\mu\nu}=\eta^{\mu\nu}+\kappa\phi^{\mu\nu}$ and $\varepsilon=\kappa\omega$, and dividing by
+$\kappa$ gives Eq.~\eqref{eq:dphi}.
 
-\paragraph{The connection.} An affine connection transforms so that $\nabla_\mu V^\nu$ is a
-tensor for every $V$; the infinitesimal form of the resulting law is the Lie derivative of a
-$(1,2)$ tensor plus an inhomogeneous term,
+\paragraph{The connection.} An affine connection transforms as
 \begin{equation}
 \delta\Gamma^{\lambda}{}_{\mu\nu}=\mathcal{L}_\varepsilon\Gamma^{\lambda}{}_{\mu\nu}
-+\partial_\mu\partial_\nu\varepsilon^\lambda .
++\partial_\mu\partial_\nu\varepsilon^\lambda ,
 \label{eq:dGamma}
 \end{equation}
-Here and below, when applied to the connection, to its trace or to the trace-adjusted
-connection, $\mathcal{L}_\varepsilon$ denotes only the corresponding tensor-form expression;
-the inhomogeneous terms, which make these objects non-tensorial, are displayed separately.
-
-\paragraph{The trace.} Let $T_\nu\equiv\Gamma^{\lambda}{}_{\nu\lambda}$. Contracting
-$\lambda$ with $\mu$ in Eq.~\eqref{eq:dGamma}, the second and third terms of the Lie derivative
-\eqref{eq:lie12} become $-\Gamma^{\rho}{}_{\lambda\nu}\partial_\rho\varepsilon^\lambda
-+\Gamma^{\lambda}{}_{\rho\nu}\partial_\lambda\varepsilon^\rho$ and cancel after renaming the
-dummy indices, while the inhomogeneous term becomes $\partial_\nu(\partial\!\cdot\!\varepsilon)$:
+where, here and below, $\mathcal{L}_\varepsilon$ applied to a non-tensorial object denotes
+only the tensor-form expression \eqref{eq:lie12}. Contracting $\lambda$ with $\mu$, the
+trace $T_\nu\equiv\Gamma^{\lambda}{}_{\nu\lambda}$ obeys
 \begin{equation}
 \delta T_\nu=\mathcal{L}_\varepsilon T_\nu+\partial_\nu(\partial\!\cdot\!\varepsilon).
 \label{eq:dT}
 \end{equation}
-
-\paragraph{The trace-adjusted connection.} By Eq.~\eqref{eq:Gdef},
-$\Gamma^{\lambda}{}_{\mu\nu}=\kappa G^{\lambda}{}_{\mu\nu}
-+\tfrac12\big(\delta^\lambda_\mu T_\nu+\delta^\lambda_\nu T_\mu\big)$, and therefore
-$\delta(\kappa G)=\delta\Gamma-\tfrac12\big(\delta^\lambda_\mu\,\delta T_\nu+\delta^\lambda_\nu\,\delta T_\mu\big)$.
-In $\delta\Gamma$, Eq.~\eqref{eq:dGamma}, the Lie derivative acts linearly on the two pieces of
-$\Gamma$, and since it annihilates $\delta^\lambda_\mu$,
-$\mathcal{L}_\varepsilon\big(\delta^\lambda_\mu T_\nu\big)=\delta^\lambda_\mu\,\mathcal{L}_\varepsilon T_\nu$.
-Using Eq.~\eqref{eq:dT} for $\delta T$, the terms $\tfrac12\delta^\lambda_\mu\mathcal{L}_\varepsilon T_\nu
-+\tfrac12\delta^\lambda_\nu\mathcal{L}_\varepsilon T_\mu$ cancel between $\delta\Gamma$ and
-the trace correction, and what survives of the latter is the inhomogeneous part of
-Eq.~\eqref{eq:dT}:
+By Eq.~\eqref{eq:Gdef},
+$\delta(\kappa G^{\lambda}{}_{\mu\nu})=\delta\Gamma^{\lambda}{}_{\mu\nu}
+-\tfrac12\big(\delta^\lambda_\mu\,\delta T_\nu+\delta^\lambda_\nu\,\delta T_\mu\big)$. Since
+$\mathcal{L}_\varepsilon$ annihilates $\delta^\lambda_\mu$, the tensor-form terms combine into
+$\kappa\,\mathcal{L}_\varepsilon G$, and only the inhomogeneous part of Eq.~\eqref{eq:dT}
+survives from the trace correction:
 \begin{equation}
 \delta(\kappa G^{\lambda}{}_{\mu\nu})=\kappa\,\mathcal{L}_\varepsilon G^{\lambda}{}_{\mu\nu}
 +\partial_\mu\partial_\nu\varepsilon^\lambda
--\tfrac12\big(\delta^\lambda_\mu\partial_\nu+\delta^\lambda_\nu\partial_\mu\big)\partial\!\cdot\!\varepsilon .
+-\tfrac12\big(\delta^\lambda_\mu\partial_\nu+\delta^\lambda_\nu\partial_\mu\big)\partial\!\cdot\!\varepsilon ,
 \end{equation}
-With $\varepsilon=\kappa\omega$ and Eq.~\eqref{eq:lie12} for $\mathcal{L}_\omega G$, this is
-Eq.~\eqref{eq:dG}. The trace adjustment thus leaves the two-derivative term
-$\partial_\mu\partial_\nu\omega^\lambda$ unchanged and subtracts
-$\tfrac12(\delta^\lambda_\mu\partial_\nu+\delta^\lambda_\nu\partial_\mu)\partial\!\cdot\!\omega$,
-so that the trace of the variation is
+which with $\varepsilon=\kappa\omega$ is Eq.~\eqref{eq:dG}. Its trace,
 $\delta^{(0)}G^{\lambda}{}_{\nu\lambda}=\tfrac{1-d}{2}\,\partial_\nu\partial\!\cdot\!\omega$,
-consistent with $\Gamma^{\sigma}{}_{\nu\sigma}=\frac{2\kappa}{1-d}g_\nu$; this is why
-$\delta^{(0)}G$ is not simpler than $\delta^{(0)}\Gamma$ even though the action in the
-variable $G$ is. Both Eq.~\eqref{eq:dT} and the final result were verified symbolically
+is consistent with $\Gamma^{\sigma}{}_{\nu\sigma}=\frac{2\kappa}{1-d}g_\nu$. Both
+Eq.~\eqref{eq:dT} and the final result were verified symbolically
 (Appendix~\ref{app:implementation}).
 
 \section{Transformations in momentum space}
@@ -810,7 +709,12 @@ group). Two monomials give the same $\mathcal{S}[T]$ if and only if they lie in 
 orbit, so the orbit averages form a basis of the invariant formal expressions, in
 one-to-one correspondence with the orbits, and any element of an orbit may serve as its
 representative. This is a candidate tensor basis; its independence as a set of tensors in a
-given dimension is checked below. The orbit sizes $n$ add up to the number of monomials.
+given dimension is checked below. The orbit sizes $n$ add up to the number of monomials. In
+the implementation the monomials are generated by applying all permutations of the index
+slots to a few prototensors (the distinct ways of distributing $\eta$'s and momenta) and
+removing duplicates; the symmetrized elements are then obtained by averaging over the
+kernel symmetries and removing duplicates again, which yields exactly the orbit averages
+described above.
 
 Tables~\ref{tab:basis-phiphi}--\ref{tab:basis-phiGG} list, for each kernel, a representative
 monomial of every orbit and the number $n$ of terms in the corresponding symmetrized sum.
@@ -823,13 +727,14 @@ Distinct orbits have disjoint monomial content, so the elements are linearly ind
 formal expressions. They can nevertheless become dependent as tensors in low dimension,
 through identities that hold only for specific $d$. Independence for generic $d$ is verified by
 computing the Gram matrix $\Gamma_K$ of each basis, $(\Gamma_K)_{ij}=\mathcal{S}[T_i]\cdot\mathcal{S}[T_j]$
-with all indices contracted, and checking that its determinant is not identically zero; the
-determinant is a polynomial in $d$ whose zeros locate the dimensions where the basis
-degenerates. A nonzero determinant establishes linear independence in any signature. Since
-the entries of $\Gamma_K$ depend on the signature only through $d$ and $p^2$, the
-dimension-dependent degeneracies can be identified at nonzero Euclidean momentum, where the
-contraction pairing is positive definite and a vanishing determinant does imply linear
-dependence; the resulting polynomial tensor relations hold in Lorentzian signature as well. For the bases of Tables~\ref{tab:basis-phiphi}--\ref{tab:basis-phiGG}, up to
+with all indices contracted. Its determinant is a polynomial in $d$ and $p^2$: when it is
+nonzero the basis is linearly independent, in any signature, and its zeros locate the
+dimensions where the basis degenerates (at Euclidean momentum the contraction pairing is
+positive definite, so there a vanishing determinant implies a dependence). The bases used
+here depend on a single momentum and their elements share the same degree in $p$, so a
+dependence with coefficients depending on $p^2$ is equivalent to one with constant
+coefficients; with several independent momenta, a vanishing Gram determinant need not imply
+a dependence with constant coefficients. For the bases of Tables~\ref{tab:basis-phiphi}--\ref{tab:basis-phiGG}, up to
 positive numerical factors,
 \begin{align}
 \det\Gamma_{\phi\phi}&=(p^2)^8\,(d-2)(d-1)^3(d+2)(d+4),\\
@@ -1072,8 +977,7 @@ K^{GG}(G_{-p},G_p)&=
 K^{\phi GG}(\phi_{p+q},G_{-p},G_{-q})&=
 \p^{\mu\nu}(p+q)\Big(-\G^{\lambda}{}_{\mu\sigma}(-p)\G^{\sigma}{}_{\nu\lambda}(-q)+\frac{1}{d-1}\G^{\sigma}{}_{\mu\sigma}(-p)\G^{\rho}{}_{\nu\rho}(-q)\Big),
 \end{align}
-whose inverse Fourier transform yields Eq.~\eqref{eq:result}, after an integration by parts
-in the $\phi G$ term.
+whose inverse Fourier transform yields Eq.~\eqref{eq:result}.
 
 \section{Symbolic implementation and reproducibility}
 \label{app:implementation}
@@ -1101,7 +1005,7 @@ Ref.~\cite{BrandtMcKeon2016}, verifies the complete cubic kernel against $\tfrac
 $K^{\phi GG}$ in a package-independent slot representation, with the conventions
 (dimension symbol, symmetries, normalization $c_{GG}=1/(d-1)$, Fourier sign); it is data,
 not an executable script.
-\item \texttt{Goldberg\_Palatini\_Cubic\_CLM.nb} (xAct/xTensor, xTras and xPerm~\cite{xPerm}):
+\item \texttt{Goldberg\_Palatini\_Cubic\_CLM.nb} (xAct/xTensor, xTras and xPerm~\cite{xAct,xPerm,xTras}):
 the second-order comparison of Section~\ref{sec:checks}. It imports the data file without
 FeynCalc, converts it to xAct tensors, derives $M_0^{-1}$ by solving its defining identity in
 a five-element basis of metric structures and checks both inverse relations
@@ -1147,6 +1051,6 @@ version; \url{https://doi.org/10.5281/zenodo.22757769} resolves to the latest ve
 
 
 \bibliographystyle{apsrev4-2}
-\bibliography{bootstrap_refs}
+\bibliography{bootstrap_refs_v3}
 
 \end{document}
