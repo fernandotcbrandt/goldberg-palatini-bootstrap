@@ -105,14 +105,14 @@ The nonlinear identities are solved with the field momenta identified, as descri
 CLM uses the opposite Ricci-tensor sign and an action prefactor 2/K², whereas the unrescaled bootstrap action has prefactor 1/kappa². With K = kappa and CLM's coupling-stripped coefficients, the checks establish:
 
 \[
-\mathcal L^{(2)}+\tfrac12\mathcal L^{\mathrm{CLM}}_{(2)}=\partial_aJ^a,
+\mathcal L^{(2)}+\tfrac12\mathcal L^{\mathrm{CLM}}_{(2)}=\partial_\mu J^\mu,
 \qquad
 \mathcal L^{(3)}+\tfrac{\kappa}{2}\mathcal L^{\mathrm{CLM}}_{(3)}=0,
 \]
 
 \[
-J^a=\tfrac12\bigl(\phi^{bc}\partial_c\phi^a{}_b
--\phi^{ab}\partial_c\phi^c{}_b\bigr).
+J^\mu=\tfrac12\bigl(\phi^{\nu\rho}\partial_\rho\phi^\mu{}_\nu
+-\phi^{\mu\nu}\partial_\rho\phi^\rho{}_\nu\bigr).
 \]
 
 The quadratic actions agree when the boundary contribution vanishes. The cubic equality is local and requires no integration by parts. The relative factor is not a physical assignment kappa = −2 or a Fourier i² effect.
@@ -129,8 +129,8 @@ Equation and table numbers refer to the current manuscript; the LaTeX labels ide
 | Sequential coefficient solution | Table III; `tab:flow` |
 | Explicit first-order kernels | Appendix E; `app:kernels`; Tables V–VIII |
 | Eliminating the connection | Eqs. (6.1)–(6.2); `eq:second`, `eq:cubicvertex` |
-| Quadratic comparison and boundary current | Eq. (6.3); `eq:clm-quadratic` |
-| Cubic comparison | Eq. (6.4); `eq:clm-cubic` |
+| Quadratic comparison and boundary current | Eq. (6.3a); `eq:clm-quadratic` |
+| Cubic comparison | Eq. (6.3b); `eq:clm-cubic` |
 | File descriptions and reproducibility | Appendix F; `app:implementation` |
 
 ## Command-line and free-Engine status

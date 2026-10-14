@@ -468,23 +468,27 @@ $M_0^{-1}$, with $M_0\equiv M(\eta)$, verifies the left and right inverse relati
 constructs $G_0=M_0^{-1}\partial\phi$, and evaluates the quadratic Lagrangian from
 Eq.~\eqref{eq:second} and the cubic one from Eq.~\eqref{eq:cubicvertex}. The conventions
 must be kept explicit: CLM write $2K^{-2}\int d^dx\,h^{\mu\nu}R^{\rm CLM}_{\mu\nu}$ with
-$R^{\rm CLM}_{\mu\nu}=-R_{\mu\nu}$ in our convention, whereas Eq.~\eqref{eq:result}
+$R^{\rm CLM}_{\mu\nu}=-R_{\mu\nu}$ in our convention (Eqs.~(2.1) and (2.2) of
+Ref.~\cite{CLM1973}), whereas Eq.~\eqref{eq:result}
 corresponds to $\kappa^{-2}\int d^dx\,h^{\mu\nu}R_{\mu\nu}$ modulo a boundary term. With
 $K=\kappa$ and $\mathcal L^{\rm CLM}_{(j)}$ the coefficients of their expansion
 $\mathcal L=\sum_{j\ge2}K^{j-2}\mathcal L^{\rm CLM}_{(j)}$, the symbolic checks give
+\begin{subequations}
+\label{eq:clm}
 \begin{align}
-\mathcal L^{(2)}+\tfrac12\,\mathcal L^{\rm CLM}_{(2)}&=\partial_aJ^a,\qquad
-J^a=\tfrac12\big(\phi^{bc}\partial_c\phi^{a}{}_{b}-\phi^{ab}\partial_c\phi^{c}{}_{b}\big),
+\mathcal L^{(2)}+\tfrac12\,\mathcal L^{\rm CLM}_{(2)}&=\partial_\mu J^\mu,\qquad
+J^\mu=\tfrac12\big(\phi^{\nu\rho}\partial_\rho\phi^{\mu}{}_{\nu}-\phi^{\mu\nu}\partial_\rho\phi^{\rho}{}_{\nu}\big),
 \label{eq:clm-quadratic}\\
 \mathcal L^{(3)}+\tfrac{\kappa}{2}\,\mathcal L^{\rm CLM}_{(3)}&=0,
 \label{eq:clm-cubic}
 \end{align}
+\end{subequations}
 with indices raised and lowered with $\eta$.\footnote{In transcribing Eq.~(2.16) of
 Ref.~\cite{CLM1973}, the first term of its second group is read as
 $\phi_{\mu\tau}\phi_{\mu\sigma,\lambda}\phi_{\lambda\tau,\sigma}$, which restores consistent
 index contractions in the printed expression.} The cubic equality is local and requires
 neither integration by parts nor the field equations of $\phi$; the quadratic actions agree
-under boundary conditions that remove the integral of $\partial_aJ^a$. The corresponding
+under boundary conditions that remove the integral of $\partial_\mu J^\mu$. The corresponding
 three-graviton vertices therefore agree once the action, Fourier and symmetrization
 conventions are matched, without a separate transcription of CLM's momentum-space vertex.
 
@@ -1019,7 +1023,7 @@ FeynCalc, converts it to xAct tensors, derives $M_0^{-1}$ by solving its definin
 a five-element basis of metric structures and checks both inverse relations
 (\texttt{inverseChecks}), substitutes $G_0$ back into $M_0G_0=\partial\phi$ as a test of index
 placement and normalization (\texttt{g0Check}), and evaluates the residuals of
-Eqs.~\eqref{eq:clm-quadratic}--\eqref{eq:clm-cubic}
+Eqs.~\eqref{eq:clm}
 (\texttt{clmQuadraticCheck}, \texttt{quadraticBoundaryCheck}, \texttt{clmCubicResidual});
 \texttt{allChecksPassed} only aggregates these residuals. The notebook uses the
 metric-compatible derivative of the flat background, \texttt{CD}, which in Cartesian
