@@ -143,7 +143,10 @@ Python/SymPy implementations of basis generation and Gram determinants exist in 
 
 ## Release status
 
-Before public distribution: complete the authors' final notebook review, verify the final bootstrap-to-export-to-CLM sequence, record tested versions and resource measurements, and choose a license for the authors' code. Publish the approved bundle with a tagged release and archival DOI. Third-party packages remain subject to their own licenses.
+Release `v1.1-submission` (2026-10-14) contains the version of the paper prepared for submission (`paper/bootstrap_article_v3.tex` and its PDF), the bootstrap notebook and kernel data regenerated on 2026-10-14, and the CLM notebook re-evaluated with those data. It is archived on Zenodo; concept DOI 10.5281/zenodo.22757769 always resolves to the latest version, and the version DOI of each release is listed on the Zenodo record.
+
+The earlier release `v1.0-submission` (2026-09-14; version DOI 10.5281/zenodo.22757770) contains the version of the paper first sent to the coauthor.
+
+The command-line drivers and the free-Engine validation described above are not part of either release. Third-party packages remain subject to their own licenses.
 
 Repository: https://github.com/fernandotcbrandt/goldberg-palatini-bootstrap (MIT license for the authors' code).
-Release `v1.0-submission` (2026-09-14) is archived on Zenodo: version DOI 10.5281/zenodo.22757770; concept DOI 10.5281/zenodo.22757769 (latest version). The command-line drivers and the free-Engine validation described above are not part of this release.
