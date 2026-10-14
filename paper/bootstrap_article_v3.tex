@@ -1028,31 +1028,12 @@ the comparison notebook in a fresh kernel), the required packages and versions, 
 result of every check, the conventions of the comparison, and the correspondence between the
 notebooks and the equations and tables of this paper.
 
-\todo{Procedure to make the code executable by anyone, to be completed before submission
-(this note is to be removed from the final version, leaving only the files, requirements and
-instructions actually available):
-(i) assemble the public bundle with the files above, the README (already written) and the
-drivers of item (ii), without backup copies or private paths (all input/output relative to the notebook or
-script directory; the notebooks may keep their formatting and front-end output);
-(ii) write one plain-text driver per notebook
-(\texttt{.wls}) that runs under \texttt{wolframscript} without a front end, prints each
-check and its residual, and exits with an error if any residual is nonzero;
-(iii) install the Wolfram Engine on a clean machine under its free license, which requires
-an account, activation and acceptance of its terms,
-together with FeynCalc, xAct, xTras and xPerm, and run the drivers there; record the exact
-versions and the outputs in the README; (iv) [done: public repository, release \texttt{v1.0-submission}, Zenodo DOI below]
-keep the repository, its releases and the Zenodo record in step, and cite the DOI here and
-in a data-availability statement, not in the abstract; (v) only then state that the calculations can be
-reproduced without a paid Mathematica license, for the uses permitted by the terms of the
-free Wolfram Engine license. The Wolfram Engine is free but not license-free, and
-notebooks need either the Mathematica front end or the drivers of item (ii). A route with no Wolfram license at all would require re-implementing
-the checks in free software (the bases and Gram determinants already exist as Python/SymPy
-scripts); whether to include such a re-implementation is left open.}
-
-The notebooks, data file, README and the source of this paper are available in the
-repository \url{https://github.com/fernandotcbrandt/goldberg-palatini-bootstrap}, release
-\texttt{v1.0-submission}, archived at \url{https://doi.org/10.5281/zenodo.22757770} (this
-version; \url{https://doi.org/10.5281/zenodo.22757769} resolves to the latest version).
+The calculations were carried out with Mathematica~13.3.1, FeynCalc~10.1.0, xTensor~1.2.0,
+xPerm~1.2.3 and xTras~1.4.2; the notebooks require Mathematica and these packages, and other
+versions have not been systematically tested. The notebooks, data file, README and the source
+of this paper are available in the repository
+\url{https://github.com/fernandotcbrandt/goldberg-palatini-bootstrap}, archived on Zenodo at
+\url{https://doi.org/10.5281/zenodo.22757769}.
 
 
 \bibliographystyle{apsrev4-2}
