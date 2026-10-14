@@ -1,0 +1,131 @@
+
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage[left=15mm, right=15mm]{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex
+								
+%\usepackage{{\Gratzer-Color-Scheme}	% Active to color theorems red and lemmas blue
+	
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc} % Any characters can be typed directly from the keyboard, eg éçñ
+\usepackage{textcomp} % provide lots of new symbols
+\usepackage{graphicx}  % Add graphics capabilities
+%\usepackage{epstopdf} % to include .eps graphics files with pdfLaTeX
+\usepackage{flafter}  % Don't place floats before their definition
+%\usepackage{topcapt}   % Define \topcation for placing captions above tables (not in gwTeX)
+%\usepackage{natbib} % use author/date bibliographic citations
+
+\usepackage{amsmath,amssymb,amsthm,amsfonts}  % Better maths support & more symbols
+\usepackage{bm}  % Define \bm{} to use bold math fonts
+
+\usepackage[pdftex,bookmarks,colorlinks,breaklinks]{hyperref}  % PDF hyperlinks, with coloured links
+\hypersetup{linkcolor=red,citecolor=blue,filecolor=dullmagenta,urlcolor=darkblue} % coloured links
+%\hypersetup{linkcolor=black,citecolor=black,filecolor=black,urlcolor=black} % black links, for printed output
+
+%SetFonts
+
+%SetFonts
+
+\newcommand{\pmeas}[1][p]{\frac{d^{D}#1}{(2\pi)^{D}}\,}
+\newcommand{\W}{\mathcal{W}}
+\newcommand{\p}{\tilde{\phi}}
+\newcommand{\G}{\tilde{G}}
+\newcommand{\tomega}{\tilde{\omega}}
+
+\title{Expanded action - ``Cheat sheet''}
+\author{}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+\section{Action Ansatz}
+\begin{equation} 
+S = S_2 + S_3 
+ \end{equation}
+ where
+ \begin{equation} 
+\begin{aligned}S_2 = \int\frac{d^D p}{(2\pi)^D}\Bigl[
+    \p^{\mu\nu}(-p)\,K^{\phi\phi}_{\mu\nu\rho\sigma}(p)\p_{\rho\sigma}(p) + \p^{\mu\nu}(-p)K^{\phi G}_{\mu\nu\lambda}\,^{\rho\sigma}(p) \G^\lambda _{\rho\sigma}(p)+ \G^\lambda _{\rho\sigma}(-p)K^{G G}_{\lambda}\,^{\mu\nu}\,_{\rho}\,^{\sigma\tau}(p) \G^\rho _{\sigma\tau}(p) \Bigr]
+\end{aligned}\end{equation}
+\hfill \break
+\begin{equation} \begin{aligned} 
+S_3 &= S_{\phi\phi\phi} + S_{\phi\phi G} + S_{\phi G G} \\
+S_{\phi\phi\phi}  &= \int \pmeas \pmeas[q] \p^{\mu\nu} (-p) \p^{\alpha \beta} (-q) \p^{\rho\sigma} (p+q) K^{\phi\phi\phi}_{\mu\nu\alpha\beta\rho\sigma} (p,q) \\
+S_{\phi\phi G} &= \int \pmeas \pmeas[q] \p^{\mu\nu} (-p) \p^{\alpha\beta}(-q) K^{\phi\phi G}_{\mu\nu\alpha\beta\lambda}\,^{\rho\sigma} (p,q) \G^\lambda _{\rho\sigma} (p+q)\\
+S_{\phi G G}&= \int \pmeas \pmeas[q] \p^{\mu\nu} (-p-q) K^{\phi G G}_{\mu\nu\lambda}\,^{\alpha\beta}\,_{\rho}\,^{\sigma\tau} \G^\lambda _{\alpha\beta} (p) \G^\rho _{\sigma \tau} (q)
+ \end{aligned} \end{equation}
+
+
+
+\section{Gauge transformations}
+\begin{equation} 
+\begin{aligned} 
+\delta \p^{\mu\nu} = \delta^{(0)}\p^{\mu\nu} + \delta^{(1)}\p^{\mu\nu}(p) &= D_{\phi^0}^{\mu\nu}\,_{\alpha} (p)\tomega^\alpha (p) + \int \pmeas[d]{q} \p^{\alpha\beta}(p-q)\tomega^\rho (q) D_{\phi^1}^{\mu\nu}\,_{\alpha\beta\rho}(p,q) \\ 
+D_{\phi^0}^{\mu\nu}\,_{\alpha} (p) &= -i(\eta^{\mu\nu}p_\alpha - p^{(\mu}\delta^{\nu)}_{\alpha}) \\  
+D_{\phi^1}^{\mu\nu}\,_{\alpha\beta\rho}(p,q) &= -i (\delta^{\mu}_\alpha \delta^\nu _\beta p_\rho - q_\beta \delta^{(\mu}_\alpha \delta^{\nu)}_\rho)
+\end{aligned} 
+\end{equation}
+
+\begin{equation} 
+\begin{aligned} 
+\delta \G^\lambda _{\mu\nu} (p) = \delta^{(0)} \G^\lambda _{\mu\nu} (p) + \delta^{(1)} \G^\lambda _{\mu\nu} (p) &=D_{G^0}^{\lambda}\,_{\mu\nu\alpha}(p) \tomega^\alpha (p) + \int \pmeas[d]{q} \G^{\alpha}_{\beta\gamma} (p-q) \tomega^\rho (q) D_{G^1}^{\lambda}\,_{\mu\nu\alpha}\,^{\beta\gamma}\,_{\rho} (p,q) \\ 
+D_{G^0}^{\lambda}\,_{\mu\nu\alpha}(p) &= -p_\mu p_\nu \delta^{\lambda}_{\alpha} +\frac{1}{2} \delta^{\lambda}_{(\mu}p_{\nu)} p_{\alpha} \\  
+D_{G^1}^{\lambda}\,_{\mu\nu\alpha}\,^{\beta\gamma}\,_{\rho} (p,q) &= -i[\delta^\lambda _\alpha \delta^\beta _\mu \delta^\gamma _\nu (p-q)_\rho - q_\alpha \delta^\beta _\mu \delta^\gamma _\nu \delta^\lambda _\rho + \delta^\lambda _\alpha \delta^\beta _\rho \delta^\gamma _{(\mu}q_{\nu)}]
+\end{aligned} 
+\end{equation}
+
+\section{Old Identities}
+\begin{align} \begin{split} \W^{\text{old }\phi}_{\rho\sigma\alpha}(p)
+    &\equiv
+      2D_{\phi^0}^{\mu\nu}\,_{\alpha}(p)\,K^{\phi\phi}_{\mu\nu\rho\sigma}(p)
+    + D_{G^0}^{\lambda}\,_{\mu\nu\alpha}(p)\,K^{\phi G}_{\rho\sigma\lambda}\,^{\mu\nu}(p)
+    = 0  \end{split} \\[1em]
+    \begin{split}  \W^{\text{old } G} _{\rho\sigma\tau\alpha}(p)
+    &\equiv
+      D_{\phi^0}^{\mu\nu}\,_{\alpha}(p)\,K^{\phi G}_{\mu\nu\rho\sigma\tau} (-p)
+    + 2D_{G^0}^{\lambda}\,_{\mu\nu\alpha}(p)\,K^{GG}_{\lambda}\,^{\mu\nu}\,_{\rho\sigma\tau}
+    = 0 \end{split} \\[1em]
+    \begin{split} \W^{\text{old }31}_{\mu_1 \nu_ 1 \mu_2 \nu_2 \rho} (p_1 , p_2 ) &\equiv  K^{\phi\phi}_{\mu_1 \nu_ 1 \alpha \beta} (p_{1} ) D^{\phi^{1} \alpha \beta}\,_{\mu_2 \nu_2 \rho} (p_{1}, p_{1} + p_{2}) + K^{\phi\phi}_{\mu_2 \nu_ 2 \alpha \beta} (p_{2}) D^{\phi^{1} \alpha \beta}\,_{\mu_1 \nu_ 1 \rho} (p_{2},p_{1}+p_{2}) = 0 \end{split} \\[1em]
+ \begin{split} \W^{\text{old }32}_{\lambda_1 \mu_1 \nu_ 1 \mu_2 \nu_2 \rho} (p_1 , p_2 ) &\equiv 2K^{\phi G G}_{\mu_2 \nu_2 \lambda \mu \nu \lambda_1 \mu_1 \nu_1} D^{G^{0} \lambda \mu \nu}\,_{\rho} (p_1 + p_2 ) + K^{\phi G}_{\mu \nu \lambda_1 \mu_1 \nu_1 } (-p_1 ) D^{\phi^{1} \mu \nu}\,_{\mu_2 \nu_2 \rho} (p_1 , p_1 + p_2 ) + \\ &+ K^{\phi G}_{\mu_2 \nu_2 \lambda}\,^{\mu\nu}(p_2 )D^{G^{1} \lambda}\,_{\mu\nu\lambda_1 \mu_1 \nu_1 \rho} (p_2 , p_1 + p_2 ) = 0\end{split} \\[1em]
+\begin{split} \W^{\text{old }33}_{\lambda_1 \mu_1 \nu_ 1 \lambda_2 \mu_2 \nu_2 \rho} (p_1 , p_2 )& \equiv K^{\phi G G}_{\mu \nu \lambda_1 \mu_1 \nu_1 \lambda_2 \mu_2 \nu_2} D^{\phi^{0} \mu \nu}\,_{\rho} (p_1 + p_2 ) + K^{GG}_{\lambda \mu \nu \lambda_1 \mu_1 \nu_1 } D^{G^{1} \lambda \mu \nu}\,_{\lambda_2\mu_2 \nu_2 \rho} (p_1 , p_1 + p_2 ) + \\ &+ K^{GG}_{\lambda \mu\nu \lambda_2 \mu_2 \nu_2}D^{G^{1}\lambda \mu \nu}\,_{\lambda_1 \mu_1 \nu_1 \rho} (p_2 , p_1 + p_2 ) = 0\end{split} \\[1em]
+ \begin{split} \W^{\text{old }34}_{\lambda_1 \mu_1 \nu_ 1 \lambda_2 \mu_2 \nu_2 \mu_3 \nu_3 \rho} (p_1 , p_2 , p_3 ) &\equiv K^{\phi G G}_{\mu_3 \nu_3 \lambda \mu \nu \lambda_1 \mu_1 \nu_1} D^{G^{1} \lambda \mu \nu}\,_{\lambda_2 \mu_2 \nu_2 \rho} (p_1 + p_3 , p_1 +p_2 + p_3 ) +\\ &+ K^{\phi G G}_{\mu_3 \nu_3 \lambda \mu \nu \lambda_2 \mu_2 \nu_2} D^{G^{1} \lambda \mu \nu}\,_{\lambda_1 \mu_1 \nu_1 \rho} (p_2 + p_3 , p_1 +p_2 + p_3 ) + \\ &+ K^{\phi G G}_{\mu \nu \lambda_1 \mu_1 \nu_1 \lambda_2 \mu_2 \nu_2} D^{\phi^{1}\mu \nu}\,_{\mu_3 \nu_3 \rho} (p_1 + p_2 , p_1 +p_2 + p_3 ) = 0\end{split} \end{align}
+
+\section{New Identities}
+
+\begin{equation} \begin{split} \W^\phi = \W^{\text{old }\phi}_{\rho\sigma\alpha}(p)
+    &\equiv
+      2D_{\phi^0}^{\mu\nu}\,_{\alpha}(p)\,K^{\phi\phi}_{\mu\nu\rho\sigma}(p)
+    + D_{G^0}^{\lambda}\,_{\mu\nu\alpha}(p)\,K^{\phi G}_{\rho\sigma\lambda}\,^{\mu\nu}(p)
+    = 0  \end{split} \end{equation}
+    
+   \begin{equation}  \begin{split}  \W^G = \W^{\text{old } G} _{\rho\sigma\tau\alpha}(p)
+    &\equiv
+      D_{\phi^0}^{\mu\nu}\,_{\alpha}(p)\,K^{\phi G}_{\mu\nu\rho\sigma\tau} (-p)
+    + 2D_{G^0}^{\lambda}\,_{\mu\nu\alpha}(p)\,K^{GG}_{\lambda}\,^{\mu\nu}\,_{\rho\sigma\tau}
+    = 0 \end{split} \end{equation}
+    
+    \begin{equation} \begin{split} \W^{31}_{\mu_1 \nu_1 \mu_2 \nu_2 \rho} (p_1, p_2) &\equiv 3 K^{\phi\phi\phi}_{\mu_1 \nu_1 \mu_2 \nu_2 \mu \nu} (p_1, p_2) D^{\phi^{0} \mu \nu}\,_{\rho} (p_1 + p_2) + K^{\phi \phi G}_{\mu_1 \nu_1 \mu_2 \nu_2 \lambda}\,^{\mu \nu} D_{G^{0}}^\lambda \,_{\mu\nu \rho} (p_1 + p_2) +  \W^{\text{old }31}_{\mu_1 \nu_ 1 \mu_2 \nu_2 \rho} (p_1 , p_2 ) \\ &= 3 K^{\phi\phi\phi}_{\mu_1 \nu_1 \mu_2 \nu_2 \mu \nu} (p_1, p_2) D^{\phi^{0} \mu \nu}\,_{\rho} (p_1 + p_2) + K^{\phi \phi G}_{\mu_1 \nu_1 \mu_2 \nu_2 \lambda}\,^{\mu \nu} D_{G^{0}}^\lambda \,_{\mu\nu \rho} (p_1 + p_2) + \\&+  K^{\phi\phi}_{\mu_1 \nu_ 1 \mu \nu} (p_{1} ) D^{\phi^{1} \mu \nu}\,_{\mu_2 \nu_2 \rho} (p_{1}, p_{1} + p_{2}) + K^{\phi\phi}_{\mu_2 \nu_ 2 \mu \nu} (p_{2}) D^{\phi^{1} \mu \nu}\,_{\mu_1 \nu_ 1 \rho} (p_{2},p_{1}+p_{2}) = 0 \end{split}
+ \end{equation}
+    
+\begin{equation} \begin{split} \W^{32}{\lambda_1 \mu_1 \nu_ 1 \mu_2 \nu_2 \rho} (p_1, p_2 )&\equiv 2 K^{\phi \phi G}_{\mu\nu \mu_2 \nu_2 \lambda_1 \mu_1 \nu_1} D^{\phi^{0} \mu\nu}\,_{\rho} (p_1 + p_2) + \W^{\text{old }32}_{\lambda_1 \mu_1 \nu_ 1 \mu_2 \nu_2 \rho} (p_1 , p_2 ) \\ &= 2 K^{\phi \phi G}_{\mu\nu \mu_2 \nu_2 \lambda_1 \mu_1 \nu_1} D^{\phi^{0} \mu\nu}\,_{\rho} (p_1 + p_2) +  2K^{\phi G G}_{\mu_2 \nu_2 \lambda \mu \nu \lambda_1 \mu_1 \nu_1} D^{G^{0} \lambda \mu \nu}\,_{\rho} (p_1 + p_2 ) + \\ &+K^{\phi G}_{\mu \nu \lambda_1 \mu_1 \nu_1 } (-p_1 ) D^{\phi^{1} \mu \nu}\,_{\mu_2 \nu_2 \rho} (p_1 , p_1 + p_2 ) + K^{\phi G}_{\mu_2 \nu_2 \lambda}\,^{\mu\nu}(p_2 )D^{G^{1} \lambda}\,_{\mu\nu\lambda_1 \mu_1 \nu_1 \rho} (p_2 , p_1 + p_2 ) = 0\end{split}  \end{equation}
+
+\begin{equation} \begin{split} \W^{33}_{\lambda_1 \mu_1 \nu_ 1 \lambda_2 \mu_2 \nu_2 \rho} &\equiv \W^{\text{old }33}_{\lambda_1 \mu_1 \nu_ 1 \lambda_2 \mu_2 \nu_2 \rho} (p_1 , p_2 ) \\ &= K^{\phi G G}_{\mu \nu \lambda_1 \mu_1 \nu_1 \lambda_2 \mu_2 \nu_2} D^{\phi^{0} \mu \nu}\,_{\rho} (p_1 + p_2 ) + K^{GG}_{\lambda \mu \nu \lambda_1 \mu_1 \nu_1 } D^{G^{1} \lambda \mu \nu}\,_{\lambda_2\mu_2 \nu_2 \rho} (p_1 , p_1 + p_2 ) + \\ &+ K^{GG}_{\lambda \mu\nu \lambda_2 \mu_2 \nu_2}D^{G^{1}\lambda \mu \nu}\,_{\lambda_1 \mu_1 \nu_1 \rho} (p_2 , p_1 + p_2 ) = 0 \end{split}  \end{equation}
+
+\begin{equation}  \begin{split} \W^{34}_{\lambda_1 \mu_1 \nu_ 1 \lambda_2 \mu_2 \nu_2 \mu_3 \nu_3 \rho} &\equiv \W^{\text{old }34}_{\lambda_1 \mu_1 \nu_ 1 \lambda_2 \mu_2 \nu_2 \mu_3 \nu_3 \rho} (p_1 , p_2 , p_3 ) \\ &= K^{\phi G G}_{\mu_3 \nu_3 \lambda \mu \nu \lambda_1 \mu_1 \nu_1} D^{G^{1} \lambda \mu \nu}\,_{\lambda_2 \mu_2 \nu_2 \rho} (p_1 + p_3 , p_1 +p_2 + p_3 ) +\\ &+ K^{\phi G G}_{\mu_3 \nu_3 \lambda \mu \nu \lambda_2 \mu_2 \nu_2} D^{G^{1} \lambda \mu \nu}\,_{\lambda_1 \mu_1 \nu_1 \rho} (p_2 + p_3 , p_1 +p_2 + p_3 ) + \\ &+ K^{\phi G G}_{\mu \nu \lambda_1 \mu_1 \nu_1 \lambda_2 \mu_2 \nu_2} D^{\phi^{1}\mu \nu}\,_{\mu_3 \nu_3 \rho} (p_1 + p_2 , p_1 +p_2 + p_3 ) = 0\end{split}  \end{equation}
+
+\begin{equation} 
+\begin{split} 
+\W^{35}_{\mu_1 \nu_1 \mu_2 \nu_2 \mu_3 \nu_3 \rho } (p_1, p_2, p_3) &\equiv K^{\phi\phi\phi} _{\mu_1 \nu_1 \mu_2 \nu_2 \mu \nu} (p_1, p_2) D^{\phi^{1} \mu\nu}\,_{\mu_3 \nu_3 \rho} (p_1 +p_2, p_1 + p_2 + p_3) +\\ &+ K^{\phi\phi\phi} _{\mu_2 \nu_2 \mu_3 \nu_3 \mu \nu} (p_2, p_3) D^{\phi^{1} \mu\nu}\,_{\mu_1 \nu_1 \rho} (p_2 +p_2, p_1 + p_2 + p_3)  +\\&+ K^{\phi\phi\phi} _{\mu_3 \nu_3 \mu_1 \nu_1 \mu \nu} (p_3, p_1) D^{\phi^{1} \mu\nu}\,_{\mu_2 \nu_2 \rho} (p_3 +p_1, p_1 + p_2 + p_3) = 0 \end{split} \end{equation}
+
+\begin{equation} 
+\begin{split}
+\W^{36}_{\lambda_1 \mu_1 \nu_1 \mu_2 \nu_2 \mu_3 \nu_3} (p_1, p_2, p_3) &\equiv K^{\phi\phi G} _{\mu_2 \nu_2 \mu_3 \nu_3 \lambda}\,^{\mu\nu} (p_2,p_3) D^{G^{1} \lambda}\,_{\mu\nu \lambda_1 \mu_1 \nu_1} (p_2 + p_3, p_1 + p_2 + p_3) + \\ &+ K^{\phi \phi G}_{\mu_2 \nu_2 \mu \nu \lambda_1 \mu_1 \nu_1} (p_2, p_1 + p_2) D^{\phi^{1} \mu\nu}\,_{\mu_3 \nu_3 \rho} (p_1 + p_2, p_1 + p_2 + p_3) + \\ &+  K^{\phi \phi G}_{\mu_3 \nu_3 \mu \nu \lambda_1 \mu_1 \nu_1} (p_3, p_1 + p_3) D^{\phi^{1} \mu\nu}\,_{\mu_2 \nu_2 \rho} (p_1 + p_3, p_1 + p_2 + p_3)
+\end{split} \end{equation}
+
+
+
+
+
+\end{document} 
