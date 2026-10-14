@@ -162,8 +162,8 @@ its momentum as a subscript: $\phi_p$, $G_p$ and $\omega_p$ stand for $\p^{\mu\n
 $\G^{\lambda}{}_{\mu\nu}(p)$ and $\tomega^\mu(p)$. A kernel $K(A,B)$ or $K(A,B,C)$ denotes the
 full contraction of each argument with the corresponding index group of $K$, for instance
 $K^{\phi G}(\phi_{-p},G_p)\equiv\p^{\mu\nu}(-p)\,K^{\phi G}_{\mu\nu\lambda}{}^{\rho\sigma}(p)\,\G^{\lambda}{}_{\rho\sigma}(p)$.
-The field-independent and field-linear parts of the transformations are written as a linear
-map $D_{\phi^0}(p)\,\omega_p$ and a bilinear map $D_{\phi^1}(p,q)(\phi_{p-q},\omega_q)$, and
+The field-independent and field-linear parts of the transformations are written as
+$D_{\phi^0}(p)\,\omega_p$, linear in $\omega$, and $D_{\phi^1}(p,q)(\phi_{p-q},\omega_q)$, bilinear in the field and $\omega$, and
 likewise for $G$; the label names the field produced and the order in $\kappa$
 (Eq.~\eqref{eq:dmom} below and Appendix~\ref{app:momentum}).
 
@@ -345,8 +345,8 @@ $\W^{34}$    & $\delta^{(1)}S_3$ & $\phi GG$ & $K^{\phi GG}$ & 95 \\
 \end{tabular}
 \caption{Decomposition of the Noether identities \eqref{eq:noether} into field sectors. The
 last column is the generic-dimension size of the projection basis onto which each identity
-is projected to extract scalar equations for the coefficients, with the momentum
-specialization described in the text; dimension-specific dependencies, such as that of the
+is projected to extract scalar equations for the coefficients, with the momenta
+set equal as described in the text; dimension-specific dependencies, such as that of the
 95-element basis at $d=4$, are discussed in Appendix~\ref{app:identities}.}
 \label{tab:identities}
 \end{table}
@@ -362,7 +362,7 @@ below establishes that no independent cubic coefficient remains.
 
 Each identity is turned into scalar equations by projecting it onto a basis of tensors with
 the same index structure and momentum dependence; since the identity vanishes, so does every
-projection. Conversely, for an identity in the span of a projection basis with nondegenerate
+projection. Conversely, for an identity that can be expanded in a projection basis with nonsingular
 Gram matrix, the vanishing of all projections is equivalent to the vanishing of the identity;
 the one exception, $\W^{34}$ at $d=4$, is discussed in Appendix~\ref{app:identities}.
 
@@ -371,9 +371,9 @@ set equal to one another, $p_1=p_2=p_3\equiv p$, with $p$ itself arbitrary, so t
 projection basis is built from $\eta$ and a single vector; the dimensions in
 Table~\ref{tab:identities} refer to these bases. $\W^{\phi}$ and $\W^{G}$ involve a single
 momentum and are used as they stand. The Noether identities hold as tensor identities for
-arbitrary momenta, in particular for equal ones, so the specialization can only weaken the
+arbitrary momenta, in particular for equal ones, so the restriction to equal momenta can only weaken the
 system: it yields necessary conditions, never spurious ones, and the solution space of the
-specialized system contains that of the full one. The specialized system already has a
+equal-momentum system contains that of the full one. The equal-momentum system already has a
 one-dimensional solution space (Section~\ref{sec:solution}), spanned by the
 Goldberg--Palatini action. For this action the identities hold for arbitrary momenta, since
 $h^{\mu\nu}R_{\mu\nu}(\Gamma)$ is a scalar density under
@@ -604,8 +604,8 @@ $\kappa$ & gravitational coupling & & & $(2-d)/2$ \\
 $\phi^{\mu\nu}$; $\phi_p$ & density perturbation, Eq.~\eqref{eq:Gdef} & $\mu\nu$ symmetric & one & $(d-2)/2$; $-(d+2)/2$ \\
 $G^{\lambda}{}_{\mu\nu}$; $G_p$ & trace-adjusted connection, Eq.~\eqref{eq:Gdef} & $\mu\nu$ symmetric & one & $d/2$; $-d/2$ \\
 $\omega^{\mu}$; $\omega_p$ & gauge parameter & vector & one & $(d-4)/2$; $-(d+4)/2$ \\
-$D_{\phi^0}(p)$, $D_{G^0}(p)$ & $\delta^{(0)}\phi$, $\delta^{(0)}G$ as maps on $\omega$ & App.~\ref{app:momentum} & $p$ & $1$, $2$ \\
-$D_{\phi^1}(p,q)$, $D_{G^1}(p,q)$ & $\delta^{(1)}\phi$, $\delta^{(1)}G$ as maps on (field,\,$\omega$) & App.~\ref{app:momentum} & $p,q$ & $1$, $1$ \\
+$D_{\phi^0}(p)$, $D_{G^0}(p)$ & $\delta^{(0)}\phi$, $\delta^{(0)}G$ acting on $\omega$ & App.~\ref{app:momentum} & $p$ & $1$, $2$ \\
+$D_{\phi^1}(p,q)$, $D_{G^1}(p,q)$ & $\delta^{(1)}\phi$, $\delta^{(1)}G$ acting on (field,\,$\omega$) & App.~\ref{app:momentum} & $p,q$ & $1$, $1$ \\
 $K^{\phi\phi}$, $K^{\phi G}$, $K^{GG}$ & quadratic kernels of $S_2$ & Table~\ref{tab:kernels} & $p,p,\text{none}$ & $2$, $1$, $0$ \\
 $K^{\phi GG}$ & cubic kernel of $S_3$ & Table~\ref{tab:kernels} & none & $0$ \\
 $\W^{\phi},\W^{G},\W^{31},\dots,\W^{34}$ & the six Noether identities & App.~\ref{app:identities} & $p$; $p_i$ & \\
@@ -696,9 +696,9 @@ D_{G^1}{}^{\lambda}{}_{\mu\nu\alpha}{}^{\beta\gamma}{}_{\rho}(p,q)&=-i\big[
 -q_\alpha\,\delta^{\beta}_{\mu}\delta^{\gamma}_{\nu}\delta^{\lambda}_{\rho}
 +\delta^{\lambda}_{\alpha}\delta^{\beta}_{\rho}\delta^{\gamma}_{(\mu}q_{\nu)}\big].
 \end{align}
-These expressions are understood as maps acting on fields with their stated index
-symmetries; symmetrization in the contracted field slots is therefore implicit, and a
-representative differing by terms that vanish on symmetric fields defines the same map.
+These expressions are understood as acting on fields with their stated index
+symmetries; symmetrization in the contracted field indices is therefore implicit, and a
+representative differing by terms that vanish on symmetric fields gives the same result.
 
 \section{Tensor bases}
 \label{app:bases}
@@ -706,34 +706,34 @@ representative differing by terms that vanish on symmetric fields defines the sa
 Each kernel is expanded in the basis of all independent tensors with its index structure,
 built from $\eta$ and $p$ with the momentum dependence of Table~\ref{tab:kernels}. The
 construction is the same for the four kernels. One enumerates the tensor monomials of the
-required degree in $p$, each a single product of $\eta$'s over the index slots (index
-positions of $K$) not carrying a
+required degree in $p$, each a single product of $\eta$'s over the index
+positions of $K$ not carrying a
 momentum, times the appropriate powers of $p$, and symmetrizes each monomial under the
 index symmetries of the kernel. These symmetries, listed in Table~\ref{tab:kernels}, generate
-a finite group $\mathsf{G}_K$ of permutations of the index slots of $K$. Applying every
+a finite group $\mathsf{G}_K$ of permutations of the index positions of $K$. Applying every
 element of $\mathsf{G}_K$ to a monomial $T$ produces a set of $n$ distinct monomials
 $T_1,\dots,T_n$, the \emph{orbit} of $T$; the symmetrized monomial is the average over the
 orbit, $\mathcal{S}[T]=\frac1n\sum_{k=1}^{n}T_k$ (equivalently, the average of $T$ over the
 group). Two monomials give the same $\mathcal{S}[T]$ if and only if they lie in the same
-orbit, so the orbit averages form a basis of the invariant formal expressions, in
+orbit, so the orbit averages form a basis of the invariant polynomials in $\eta$ and $p$, in
 one-to-one correspondence with the orbits, and any element of an orbit may serve as its
 representative. This is a candidate tensor basis; its independence as a set of tensors in a
 given dimension is checked below. The orbit sizes $n$ add up to the number of monomials. In
 the implementation the monomials are generated by applying all permutations of the index
-slots to a few prototensors (the distinct ways of distributing $\eta$'s and momenta) and
+positions to a few prototensors (the distinct ways of distributing $\eta$'s and momenta) and
 removing duplicates; the symmetrized elements are then obtained by averaging over the
 kernel symmetries and removing duplicates again, which yields exactly the orbit averages
 described above.
 
 Tables~\ref{tab:basis-phiphi}--\ref{tab:basis-phiGG} list, for each kernel, a representative
 monomial of every orbit and the number $n$ of terms in the corresponding symmetrized sum.
-Indices are written in the order of the kernel's slots; $p^2\equiv p_\alpha p^\alpha$. For
+Indices are written in the order of the kernel's index positions; $p^2\equiv p_\alpha p^\alpha$. For
 $K^{\phi\phi}$, for instance, element~4 of Table~\ref{tab:basis-phiphi} is
 $\tfrac14\big(p_\mu p_\rho\eta_{\nu\sigma}+p_\nu p_\rho\eta_{\mu\sigma}
 +p_\mu p_\sigma\eta_{\nu\rho}+p_\nu p_\sigma\eta_{\mu\rho}\big)$.
 
 Distinct orbits have disjoint monomial content, so the elements are linearly independent as
-formal expressions. They can nevertheless become dependent as tensors in low dimension,
+polynomials in $\eta$ and $p$, before any dimension-dependent identity is used. They can nevertheless become dependent as tensors in low dimension,
 through identities that hold only for specific $d$. Independence for generic $d$ is verified by
 computing the Gram matrix $\Gamma_K$ of each basis, $(\Gamma_K)_{ij}=\mathcal{S}[T_i]\cdot\mathcal{S}[T_j]$
 with all indices contracted. Its determinant is a polynomial in $d$ and $p^2$: when it is
@@ -829,7 +829,7 @@ monomials under the symmetry group of order 8.}
 \bottomrule
 \end{tabular}
 \caption{Basis of $K^{\phi GG}_{\mu\nu\lambda\alpha\beta\rho\sigma\tau}$: 16 elements, the
-orbits of the 105 monomials (one for each perfect matching of the eight index slots by four
+orbits of the 105 monomials (one for each way of pairing the eight indices into four
 $\eta$'s) under the symmetry group of order 16.}
 \label{tab:basis-phiGG}
 \end{table}
@@ -838,7 +838,7 @@ $\eta$'s) under the symmetry group of order 16.}
 \label{app:identities}
 
 In the notation of Section~\ref{sec:variables}, each identity of Table~\ref{tab:identities}
-states that a multilinear form in the fields and the gauge parameter vanishes identically.
+states that an expression linear in each field and in the gauge parameter vanishes identically.
 Writing $P$ for the total momentum ($P=p_1+p_2$ or $p_1+p_2+p_3$), the six forms are
 \begin{align}
 \W^{\phi}:&\quad 2K^{\phi\phi}\big(\phi_{-p},D_{\phi^0}(p)\,\omega_p\big)
@@ -871,7 +871,7 @@ Eq.~\eqref{eq:ansatz} with one argument replaced by the appropriate piece of the
 transformation \eqref{eq:dmom}, the momenta being fixed by momentum conservation. Since the
 fields are arbitrary within their symmetry classes, the coefficient tensor of
 $\phi_{-p_1}\cdots\omega_P$ in each form, projected onto the index symmetries of the field
-slots, vanishes. The scalar forms above only define the identities and are not used as
+indices, vanishes. The scalar forms above only define the identities and are not used as
 such: we work throughout with these coefficient tensors, whose free indices are kept so that
 each identity can be projected onto the bases of Appendix~\ref{app:bases}. With all indices
 displayed, and in terms
@@ -912,7 +912,7 @@ of the cubic identities the independent momenta are identified, $p_1=p_2=p$, and
 $p_3=p$ in $\W^{34}$, as explained in Section~\ref{sec:identities}. The projection bases of
 Table~\ref{tab:identities} are generated by the procedure of Appendix~\ref{app:bases}, from
 the monomials with the index structure and degree in $p$ of each identity, averaged over its
-symmetry group: the symmetries of the kernel slots involved
+symmetry group: the symmetries of the kernel indices involved
 and, for $\W^{31}$, $\W^{33}$ and $\W^{34}$, the exchange of the two identical fields.
 Table~\ref{tab:proj} lists the three smallest ones as an illustration; the remaining
 dimensions, 23, 20 and 95, make an explicit listing unhelpful, and those bases are generated
@@ -1014,7 +1014,7 @@ Table~\ref{tab:flow}, checks the resulting kernels against Eqs.~(3.5)--(3.6) of
 Ref.~\cite{BrandtMcKeon2016}, verifies the complete cubic kernel against $\tfrac12M(\phi)$
 (cell tagged \texttt{FullCubicKernelCheck}), and exports the normalized kernels.
 \item \texttt{Goldberg\_Palatini\_Bootstrap\_kernels.wl}: the exported kernels $K^{GG}$ and
-$K^{\phi GG}$ in a package-independent slot representation, with the conventions
+$K^{\phi GG}$ in a package-independent representation by index positions, with the conventions
 (dimension symbol, symmetries, normalization $c_{GG}=1/(d-1)$, Fourier sign); it is data,
 not an executable script.
 \item \texttt{Goldberg\_Palatini\_Cubic\_CLM.nb} (xAct/xTensor, xTras and xPerm~\cite{xAct,xPerm,xTras}):
@@ -1028,7 +1028,7 @@ Eqs.~\eqref{eq:clm}
 \texttt{allChecksPassed} only aggregates these residuals. The notebook uses the
 metric-compatible derivative of the flat background, \texttt{CD}, which in Cartesian
 coordinates is the partial derivative of the text; the dimension is kept symbolic, and the
-pole of $M_0^{-1}$ at $d=2$ is separate from the domain $d\geq4$ of the bases.
+pole of $M_0^{-1}$ at $d=2$ is separate from the range $d\geq4$ of the bases.
 \end{enumerate}
 A \texttt{README} gives the evaluation order (the first notebook and its export cell first;
 the comparison notebook in a fresh kernel), the required packages and versions, the expected
