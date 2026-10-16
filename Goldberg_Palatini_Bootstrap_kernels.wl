@@ -1,6 +1,6 @@
 <|"SchemaVersion" -> 1, "SourceNotebook" -> 
-  "Goldberg_Palatini_Bootstrap_en.nb", "Created" -> "2026-10-16T20:06:38", 
- "KernelVersion" -> "13.3.1 for Mac OS X ARM (64-bit) (July 24, 2023)", 
+  "Goldberg_Palatini_Bootstrap_en.nb", "Created" -> "2026-10-16T20:32:36", 
+ "KernelVersion" -> "15.0.0 for Mac OS X ARM (64-bit) (May 19, 2026)", 
  "FeynCalcVersion" -> "10.1.0", "Dimension" -> GPBootstrapData`Dimension, 
  "Domain" -> 
   "Generic symbolic dimension d >= 4; inverse construction requires d != 2.", 
