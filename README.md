@@ -27,7 +27,7 @@ The current supported workflow uses the Mathematica notebook interface:
 
 Install the packages according to their official instructions: [FeynCalc](https://feyncalc.github.io/), [xAct](https://www.xact.es/), and [xTras](https://www.xact.es/xTras/).
 
-The current kernel export (2026-10-14) records Mathematica 14.2.0 on Linux x86 (64-bit) and FeynCalc 10.1.0; the CLM notebook was evaluated in the same session with xTensor 1.2.0, xPerm 1.2.3, xTras 1.4.2 and SymManipulator 0.9.5, with all residuals zero. The exported kernels are identical to those of the earlier export of 2026-09-14 (Mathematica 13.3.1 on macOS ARM); only the creation date and kernel version in the header differ. The CLM input sequence was also evaluated in a separate Mathematica 15.0.0 kernel with all final residuals zero. These observations are not a claim of compatibility with every version.
+The current kernel export (2026-10-16) records Mathematica 13.3.1 on macOS ARM (64-bit) and FeynCalc 10.1.0. Both notebooks were re-evaluated in fresh kernels in that version, the CLM notebook with xTensor 1.2.0, xPerm 1.2.3, xTras 1.4.2 and SymManipulator 0.9.5, with all residuals zero. The exported kernels are identical to those of the earlier exports of 2026-09-14 (Mathematica 13.3.1 on macOS ARM) and 2026-10-14 (Mathematica 14.2.0 on Linux x86); only the creation date and kernel version in the header differ. The CLM input sequence was also evaluated in a separate Mathematica 15.0.0 kernel with all final residuals zero. These observations are not a claim of compatibility with every version.
 
 ## Evaluation order
 
@@ -87,6 +87,8 @@ The final message is:
 ```text
 PASS: the quadratic and cubic Lagrangians agree with CLM, after accounting for the overall normalization and the explicit quadratic total derivative.
 ```
+
+Section 11 of the CLM notebook compares, in terms of the full density `h`, the action obtained by eliminating the connection with Eq. (A14) of CLM; its final output, `FullSimplify[ToCanonical[2 lagGonshell + lagCLM]]`, should be `0`. This explains the quadratic total derivative: CLM Eq. (2.10) differs from the expansion of their Eq. (A14) by that term.
 
 An unevaluated symbol is not a successful residual. The aggregate PASS concerns the listed checks; it does not certify an independent bootstrap rerun or a momentum-space vertex extraction.
 
