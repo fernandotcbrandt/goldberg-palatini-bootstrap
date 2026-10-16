@@ -1,5 +1,5 @@
 <|"SchemaVersion" -> 1, "SourceNotebook" -> 
-  "Goldberg_Palatini_Bootstrap_en.nb", "Created" -> "2026-10-16T20:32:36", 
+  "Goldberg_Palatini_Bootstrap_en.nb", "Created" -> "2026-10-16T20:48:09", 
  "KernelVersion" -> "15.0.0 for Mac OS X ARM (64-bit) (May 19, 2026)", 
  "FeynCalcVersion" -> "10.1.0", "Dimension" -> GPBootstrapData`Dimension, 
  "Domain" -> 
