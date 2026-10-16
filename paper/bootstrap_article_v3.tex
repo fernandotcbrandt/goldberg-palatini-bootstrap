@@ -201,15 +201,14 @@ a metric is assumed.
 
 \paragraph{Transformations.} Under an infinitesimal diffeomorphism
 $x^\mu\to x^\mu-\kappa\,\omega^\mu(x)$ the fields transform as
+$\delta\phi=\delta^{(0)}\phi+\kappa\,\delta^{(1)}\phi$ and $\delta G=\delta^{(0)}G+\kappa\,\delta^{(1)}G$, with
 \begin{align}
-\delta\phi^{\mu\nu}&=
-\underbrace{\eta^{\mu\nu}\partial\!\cdot\!\omega-\partial^{(\mu}\omega^{\nu)}}_{\delta^{(0)}\phi^{\mu\nu}}
-+\kappa\,\underbrace{\big[\partial_\rho(\phi^{\mu\nu}\omega^\rho)-\partial_\rho\omega^{(\mu}\phi^{\nu)\rho}\big]}_{\delta^{(1)}\phi^{\mu\nu}},
+\delta^{(0)}\phi^{\mu\nu}&=\eta^{\mu\nu}\partial\!\cdot\!\omega-\partial^{(\mu}\omega^{\nu)},&
+\delta^{(1)}\phi^{\mu\nu}&=\partial_\rho(\phi^{\mu\nu}\omega^\rho)-\partial_\rho\omega^{(\mu}\phi^{\nu)\rho},
 \label{eq:dphi}\\
-\delta G^{\lambda}{}_{\mu\nu}&=
-\underbrace{\partial_\mu\partial_\nu\omega^\lambda-\tfrac12\delta^{\lambda}_{(\mu}\partial_{\nu)}\partial\!\cdot\!\omega}_{\delta^{(0)}G^{\lambda}{}_{\mu\nu}}
-+\kappa\,\underbrace{\big[\omega^\rho\partial_\rho G^{\lambda}{}_{\mu\nu}-G^{\rho}{}_{\mu\nu}\partial_\rho\omega^\lambda
-+G^{\lambda}{}_{\rho(\mu}\partial_{\nu)}\omega^\rho\big]}_{\delta^{(1)}G^{\lambda}{}_{\mu\nu}}.
+\delta^{(0)}G^{\lambda}{}_{\mu\nu}&=\partial_\mu\partial_\nu\omega^\lambda-\tfrac12\delta^{\lambda}_{(\mu}\partial_{\nu)}\partial\!\cdot\!\omega,&
+\delta^{(1)}G^{\lambda}{}_{\mu\nu}&=\omega^\rho\partial_\rho G^{\lambda}{}_{\mu\nu}-G^{\rho}{}_{\mu\nu}\partial_\rho\omega^\lambda
++G^{\lambda}{}_{\rho(\mu}\partial_{\nu)}\omega^\rho.
 \label{eq:dG}
 \end{align}
 The split into a field-independent contribution $\delta^{(0)}$ and a field-linear contribution
@@ -254,11 +253,9 @@ $[G]=d/2$, with $[\kappa]=(2-d)/2$. The ansatz assigns the overall power $\kappa
 that $S_n$ itself contains no power of $\kappa$, and introduces no other dimensionful
 constant. Both conditions are needed: additional powers of $\kappa$ at fixed $n$, or a new
 dimensionful parameter, would allow terms with more derivatives and the correct dimension,
-so these assumptions are what bound the derivative order.\footnote{Equivalently, in terms of the dimensionless
-density perturbation $h-\eta=\kappa\phi$ and the unrescaled trace-adjusted connection
-$\kappa G$, the action is $\kappa^{-2}$ times a functional containing no further
-dimensionful constant. Expressing a term of field degree $n$ in the normalized variables
-$\phi,G$ then gives the overall power $\kappa^{n-2}$.} A local monomial with $a$ fields $\phi$, $b$
+so these assumptions are what bound the derivative order.\footnote{Equivalently, in terms of $h-\eta=\kappa\phi$ and
+$\kappa G$ the action is $\kappa^{-2}$ times a functional with no further dimensionful
+constant; a term of degree $n$ in $\phi,G$ then carries $\kappa^{n-2}$.} A local monomial with $a$ fields $\phi$, $b$
 fields $G$ and $r$ derivatives, multiplied by $\kappa^{a+b-2}$, has mass dimension $d+r+b-2$,
 so that a dimensionless action requires $r+b=2$: two derivatives in $K^{\phi\phi}$, one in
 $K^{\phi G}$ and none in $K^{GG}$; at cubic order $\phi\phi\phi$ with two, $\phi\phi G$ with
