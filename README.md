@@ -55,7 +55,7 @@ Expected first-order results:
 - One overall normalization remains. With `cGG = 1/(Nd - 1)`, the nonzero coefficients in the notebook's basis order are `bhG = -1`, `aGG = -1`, `cGG = 1/(Nd - 1)`, `ahGG = -1`, and `ghGG = 1/(Nd - 1)`.
 - `fullCubicKernelResidual` is **0**. This checks the complete first-order phi-G-G kernel, not the second-order CLM vertex.
 
-The 95-element W34 projection calculation is the most expensive stage. On an Apple M1 Max (64 GB) with Mathematica 15.0.0, a complete evaluation in a fresh kernel took 254 s with a peak kernel memory of 939 MB for the bootstrap notebook, and 6 s with 156 MB for the CLM notebook; the last cell of each notebook prints these figures. They are indicative and depend on the machine and on the package versions.
+The 95-element W34 projection calculation may be the most expensive stage. On an Apple M1 Max (64 GB) with Mathematica 15.0.0, a complete evaluation in a fresh kernel took 254 s with a peak kernel memory of 939 MB for the bootstrap notebook, and 6 s with 156 MB for the CLM notebook; the last cell of each notebook prints these figures. They are indicative and depend on the machine and on the package versions.
 
 ### 2. Second-order comparison with CLM
 
