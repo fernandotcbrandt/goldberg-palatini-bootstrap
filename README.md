@@ -27,7 +27,7 @@ The current supported workflow uses the Mathematica notebook interface:
 
 Install the packages according to their official instructions: [FeynCalc](https://feyncalc.github.io/), [xAct](https://www.xact.es/), and [xTras](https://www.xact.es/xTras/).
 
-The current kernel export (2026-10-16) records Mathematica 13.3.1 on macOS ARM (64-bit) and FeynCalc 10.1.0. Both notebooks were re-evaluated in fresh kernels in that version, the CLM notebook with xTensor 1.2.0, xPerm 1.2.3, xTras 1.4.2 and SymManipulator 0.9.5, with all residuals zero. The exported kernels are identical to those of the earlier exports of 2026-09-14 (Mathematica 13.3.1 on macOS ARM) and 2026-10-14 (Mathematica 14.2.0 on Linux x86); only the creation date and kernel version in the header differ. The CLM input sequence was also evaluated in a separate Mathematica 15.0.0 kernel with all final residuals zero. These observations are not a claim of compatibility with every version.
+The current kernel export (2026-10-16) records Mathematica 13.3.1 on macOS ARM (64-bit) and FeynCalc 10.1.0. Both notebooks were re-evaluated in fresh kernels in that version, the CLM notebook with xTensor 1.2.0, xPerm 1.2.3, xTras 1.4.2 and SymManipulator 0.9.5, with all residuals zero. The exported kernels are identical to those of the earlier exports of 2026-09-14 (Mathematica 13.3.1 on macOS ARM) and 2026-10-14 (Mathematica 14.2.0 on Linux x86); only the creation date and kernel version in the header differ. Both notebooks were also evaluated by the coauthor in Mathematica 15.0 on macOS, and the CLM input sequence in a separate Mathematica 15.0.0 kernel, with all final residuals zero. These observations are not a claim of compatibility with every version.
 
 ## Evaluation order
 
