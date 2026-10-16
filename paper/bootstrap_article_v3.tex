@@ -495,11 +495,13 @@ Ref.~\cite{CLM1973}, the first term of its second group is read as
 $\phi_{\mu\tau}\phi_{\mu\sigma,\lambda}\phi_{\lambda\tau,\sigma}$, which restores consistent
 index contractions in the printed expression.} The cubic equality is local and requires
 neither integration by parts nor the field equations of $\phi$; the quadratic actions agree
-under boundary conditions that remove the integral of $\partial_\mu J^\mu$. The corresponding
+under boundary conditions that remove the integral of $\partial_\mu J^\mu$. The surface term reflects the
+form in which CLM write their quadratic Lagrangian: expressed in the full density
+$h^{\mu\nu}$, the action obtained by eliminating $G$ from Eq.~\eqref{eq:result} coincides
+identically with Eq.~(A14) of Ref.~\cite{CLM1973}, without integration by parts, so that their
+Eq.~(2.10) differs from the expansion of their Eq.~(A14) by a total derivative. The corresponding
 three-graviton vertices therefore agree once the action, Fourier and symmetrization
 conventions are matched, without a separate transcription of CLM's momentum-space vertex.
-
-\textbf{Remark:} It is believed that the surface term arises from an implicit integration by parts performed by CLM in going from eq. (A14) – where the action is written in terms of the complete Goldberg metric \( h^{\mu\nu} \) – to eq. (2.10). If eq.\eqref{eq:result} is explicitly written in terms of \( h^{\mu\nu}\), then solving the classical equations of motion for the auxiliary field \(G\) and plugging back into the action yields the same form of CLM's eq. (A14), as long as we account for the relative \(-1/2\) factor arising from the different choices of convention. This checks their equivalence and suggests the aforementioned surface term is originated during CLM's passage from (A14) to (2.10).
 
 \paragraph*{Range of validity.} Uniqueness holds within the class defined by the inputs listed in
 Section~\ref{sec:introduction}; it is not established in a class containing further powers of
@@ -1034,7 +1036,9 @@ a five-element basis of metric structures and checks both inverse relations
 placement and normalization (\texttt{g0Check}), and evaluates the residuals of
 Eqs.~\eqref{eq:clm}
 (\texttt{clmQuadraticCheck}, \texttt{quadraticBoundaryCheck}, \texttt{clmCubicResidual});
-\texttt{allChecksPassed} only aggregates these residuals. The notebook uses the
+\texttt{allChecksPassed} only aggregates these residuals. A final section compares, in terms of
+the full density $h^{\mu\nu}$, the action obtained by eliminating $G$ with Eq.~(A14) of
+Ref.~\cite{CLM1973}. The notebook uses the
 metric-compatible derivative of the flat background, \texttt{CD}, which in Cartesian
 coordinates is the partial derivative of the text; the dimension is kept symbolic, and the
 pole of $M_0^{-1}$ at $d=2$ is separate from the range $d\geq4$ of the bases.
