@@ -25,6 +25,8 @@ The current supported workflow uses the Mathematica notebook interface:
 
 Install the packages according to their official instructions: [FeynCalc](https://feyncalc.github.io/), [xAct](https://www.xact.es/), and [xTras](https://www.xact.es/xTras/).
 
+Both notebooks are distributed with the saved outputs of the reference run (Mathematica 15.0.0), so the results (basis sizes, coefficient solution, residuals and the final PASS) can be inspected without a Mathematica license using the free [Wolfram Player](https://www.wolfram.com/player/). Re-evaluating the notebooks requires Mathematica.
+
 The current kernel export (2026-10-16) records Mathematica 15.0.0 on macOS ARM (64-bit) and FeynCalc 10.1.0. Both notebooks were evaluated in fresh kernels in that version, the CLM notebook with xTensor 1.2.0, xPerm 1.2.3, xTras 1.4.2 and SymManipulator 0.9.5, with all residuals zero, including `fullCubicKernelResidual` and Section 11 of the CLM notebook. The same results were obtained in Mathematica 13.3.1 on macOS ARM (2026-09-14 and 2026-10-16) and 14.2.0 on Linux x86 (2026-10-14): the exported kernels are identical, and only the creation date and kernel version in the header differ. These observations are not a claim of compatibility with every version.
 
 ## Evaluation order
