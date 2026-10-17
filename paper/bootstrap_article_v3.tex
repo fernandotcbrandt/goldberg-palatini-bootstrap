@@ -156,6 +156,12 @@ $\sqrt{|g|}$.
 likewise for $\G^{\lambda}{}_{\mu\nu}$ and for the gauge parameter $\tomega^\mu$, with
 $\ip{p}\equiv\int d^dp/(2\pi)^d$. A derivative acting on a field of momentum $p$ becomes
 $-ip_\mu$, and a product of fields becomes a convolution.
+\item The gravitational coupling constant \( \kappa \) is such that the usual Einstein-Hilbert action is written as
+ \begin{equation} 
+ S = \frac{1}{\kappa^2} \int d^dx \, \sqrt{|g|} g^{\mu\nu} R_{\mu\nu}
+ \end{equation}
+ and, thus, \([\kappa] = (2-d)/2\).
+
 \end{itemize}
 
 \paragraph{Compact notation.} In the main text indices are suppressed and a field carries
@@ -192,7 +198,7 @@ $g_\nu\equiv G^{\sigma}{}_{\nu\sigma}$, and substituting back,
 +\frac{1}{1-d}\big(\delta^{\lambda}_{\mu}\,g_\nu+\delta^{\lambda}_{\nu}\,g_\mu\big)\Big],
 \label{eq:GammaofG}
 \end{equation}
-Eqs.~(6)--(8) of Ref.~\cite{BrandtMcKeon2015}. The trace adjustment is what cancels the
+Eqs.~(6)--(8) of Ref.~\cite{BrandtMcKeon2015}. The trace adjustment is what cancels the 
 $\partial_\nu\Gamma^{\lambda}{}_{\mu\lambda}$ term of $h^{\mu\nu}R_{\mu\nu}(\Gamma)$ against
 the trace part of $\partial_\lambda\Gamma^{\lambda}{}_{\mu\nu}$, leaving the single derivative
 term of Eq.~\eqref{eq:result} below. Like $\phi$, which is the metric-density perturbation divided by
@@ -437,8 +443,8 @@ S=\int d^dx\,\Big[-G^{\lambda}{}_{\mu\nu}\partial_\lambda\phi^{\mu\nu}
 \Big(-\operatorname{tr}(G_\mu G_\nu)+\frac{1}{d-1}\,g_\mu g_\nu\Big)\Big],
 \label{eq:result}
 \end{equation}
-and multiplying it by $\tfrac12$ gives the Goldberg--Palatini action
-$\frac{1}{2\kappa^2}\int d^dx\,h^{\mu\nu}R_{\mu\nu}(\Gamma)$, up to a surface term, written in the variables
+which gives the Goldberg--Palatini action
+$\frac{1}{\kappa^2}\int d^dx\,h^{\mu\nu}R_{\mu\nu}(\Gamma)$, up to a surface term, written in the variables
 \eqref{eq:Gdef}, with $h^{\mu\nu}=\eta^{\mu\nu}+\kappa\phi^{\mu\nu}$; Ref.~\cite{BrandtMcKeon2016}
 writes the same action with $\kappa=1$, Eqs.~(3.5)--(3.6) there. With the field dimensions
 and coupling-power assignment adopted here, the overall constant left undetermined by the
@@ -895,7 +901,7 @@ fields are arbitrary within their symmetry classes, the coefficient tensor of
 $\phi_{-p_1}\cdots\omega_P$ in each form, projected onto the index symmetries of the field
 indices, vanishes. The scalar forms above only define the identities and are not used as
 such: we work throughout with these coefficient tensors, whose free indices are kept so that
-each identity can be projected onto the bases of Appendix~\ref{app:bases}. With all indices
+each identity can be projected onto the bases described below. With all indices
 displayed, and in terms
 of the tensors of Appendix~\ref{app:momentum}, these coefficient tensors are
 \begin{align}
