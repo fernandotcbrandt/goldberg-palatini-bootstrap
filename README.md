@@ -12,11 +12,9 @@ This material accompanies `paper/bootstrap_article_v3.tex`. It reconstructs the 
 | `Goldberg_Palatini_Bootstrap_kernels.wl` | Package-independent **data** exported by the bootstrap notebook: normalized kernels and their conventions. This is not a standalone reproduction script. |
 | `Goldberg_Palatini_Cubic_CLM.nb` | xAct/xTras derivation of the inverse of M0, elimination of the linear connection, and quadratic and cubic comparisons with CLM. |
 
-In the working project, these three files are under `Relatorio_IC_V13092026/Relatorio_IC_update/Relatório_IC/`, relative to the project root. This README is maintained in `artigo_bootstrap/`.
-
 For distribution, place this README and the approved supplementary files together in one directory. In particular, keep the bootstrap notebook, its exported data, and the CLM notebook side by side: their export/import uses `NotebookDirectory[]`.
 
-The CLM calculation derives the inverse here; `FirstOrderG_RiemannG.nb` is not a dependency. Backup notebooks (`_old_`, `_before_`), private logs, and the numerical Python plane-wave checks are not part of the supplementary workflow.
+The CLM notebook derives the inverse of M0 itself and depends on no other notebook.
 
 ## Software
 
@@ -141,11 +139,9 @@ Complete public `.wls` reproduction drivers are **not yet supplied or validated*
 
 Running without a paid Mathematica license would require a separately tested Wolfram Engine workflow and compliance with the terms of its free license. It is not execution without a license. See the [official terms](https://www.wolfram.com/legal/terms/wolfram-engine.html). Tests with an installed Mathematica kernel do not establish validation with the freely licensed Engine distribution.
 
-Python/SymPy implementations of basis generation and Gram determinants exist in the working project. They are optional, partial independent checks, not an automatic translation of the notebooks or a complete Python implementation of the bootstrap and CLM comparison.
-
 ## Release status
 
-Release `v1.1-submission` (2026-10-14) contains the version of the paper prepared for submission (`paper/bootstrap_article_v3.tex` and its PDF), the bootstrap notebook and kernel data regenerated on 2026-10-14, and the CLM notebook re-evaluated with those data. It is archived on Zenodo; concept DOI 10.5281/zenodo.22757769 always resolves to the latest version, and the version DOI of each release is listed on the Zenodo record.
+Release `v1.1-submission` (2026-10-16) contains the version of the paper prepared for submission (`paper/bootstrap_article_v3.tex` and its PDF), the bootstrap notebook and kernel data evaluated on 2026-10-16, and the CLM notebook evaluated with those data. It is archived on Zenodo; concept DOI 10.5281/zenodo.22757769 always resolves to the latest version, and the version DOI of each release is listed on the Zenodo record.
 
 The earlier release `v1.0-submission` (2026-09-14; version DOI 10.5281/zenodo.22757770) contains the version of the paper first sent to the coauthor.
 
