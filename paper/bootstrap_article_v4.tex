@@ -93,21 +93,23 @@ vertex from the quadratic term, up to total derivatives~\cite{BrandtFrenkel1996}
 program does not terminate there, however, since new vertices appear at every order. The
 first-order choice is adapted to the polynomial structure of the Goldberg--Palatini
 action~\cite{Goldberg1958,Palatini1919,Ferraris1982} and to its use in perturbative
-gravity~\cite{BrandtMcKeon2016}. We restrict the action to quadratic kernels of
-prescribed derivative order and to a derivative-free cubic interaction of the form $\phi GG$, linear in $\phi$ and quadratic
-in $G$ as in the Goldberg--Palatini action,
-expand the kernels in tensor bases, and impose the Noether identities order by order in the
-fields; the determination of the action then reduces to a finite system of linear constraints on 31
-coefficients, which is solved completely. Because the field equation of $G$ is algebraic, the
+gravity~\cite{BrandtMcKeon2016}. We first show, using a coordinate dilatation as a particular
+diffeomorphism, that a local action polynomial in these variables, with each additional field
+carrying one power of the coupling and no other dimensionful constant, terminates at most at
+cubic order, its only possible cubic term being a derivative-free interaction $\phi GG$, linear
+in $\phi$ and quadratic in $G$ as in the Goldberg--Palatini action. We then expand the kernels
+of this class in tensor bases and impose the Noether identities with general diffeomorphisms
+order by order in the fields; the determination of the action reduces to a finite system of
+linear constraints on 31 coefficients (for $d\geq4$), which is solved completely. Because the field equation of $G$ is algebraic, the
 connection can then be eliminated exactly, so the finite determination of the first-order
 action also fixes the infinite set of graviton vertices of the metric
 formulation~\cite{BrandtMcKeon2016}.
 
-Our objective is to determine the freedom remaining in this ansatz after the Noether
+Our objective is to determine the freedom remaining in this class after the Noether
 identities are imposed. Locality, Lorentz covariance and parity, the transformation laws, the
-field content, the coupling-power assignment that bounds the number of derivatives, and the
-restriction on the cubic interaction are inputs to the construction; the
-uniqueness statement concerns this specified class of actions and does not assert that
+field content, the coupling-power assignment that bounds the number of derivatives, and
+polynomiality are inputs to the construction; the restriction of the cubic interaction is
+derived from them, and the uniqueness statement concerns this specified class of actions and does not assert that
 diffeomorphism invariance alone selects Einstein gravity among all local gravitational
 theories.
 
@@ -122,16 +124,19 @@ bootstrapped, and observes that the existing arguments establish existence rathe
 uniqueness. In the present work no energy--momentum tensor is constructed: the off-shell identities of
 Noether's second theorem are imposed directly, the geometrical input being retained in the
 transformation laws; the variations of both independent fields enter the identities; and
-uniqueness is established within the stated class. The idea of using the consistency of the
+uniqueness is established within the stated class. The termination at cubic order, a
+property of the solution in the first-order construction of Ref.~\cite{Deser1970}, appears here
+as a necessary condition on any polynomial action in these variables. The idea of using the consistency of the
 gauge identities instead of self-coupling goes back to Wald~\cite{Wald1986}, who analyzed the
 consistent nonlinear extensions through identities among the field equations; here the
-nonlinear transformations are prescribed and the compatible action is determined within a
-finite ansatz. The result concerns the bulk action up to total derivatives and does not
+nonlinear transformations are prescribed and the compatible action is determined within the
+polynomial class. The result concerns the bulk action up to total derivatives and does not
 determine boundary terms.
 
 The paper is organized so that the main text carries the logic of the construction and the
 appendices carry its details. Section~\ref{sec:variables} fixes the fields and their
-transformations, Section~\ref{sec:ansatz} the ansatz and its counting, Section~\ref{sec:identities}
+transformations, Section~\ref{sec:closure} derives the polynomial closure,
+Section~\ref{sec:ansatz} gives the ansatz and its tensor bases, Section~\ref{sec:identities}
 the identities and their decomposition into sectors, Section~\ref{sec:solution} the solution,
 and Section~\ref{sec:checks} the reduction to the metric formulation. Figure~\ref{fig:flow} summarizes the procedure. The notation and the derivation of the
 transformation laws are collected in Appendix~\ref{app:transf}; explicit tensors, bases,
