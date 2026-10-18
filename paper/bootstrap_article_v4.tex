@@ -252,12 +252,15 @@ S=\sum_{n=2}^{N}\kappa^{n-2}S_n ,
 \label{eq:polyaction}
 \end{equation}
 where $S_n$ is homogeneous of degree $n$ in the fields, Lorentz covariant and parity even,
-built with $\eta$ and derivatives, and contains no dimensionful constant; $N$ is finite. The
+built with $\eta$ and derivatives, and contains no dimensionful constant; $N$ is finite and
+is the highest degree for which $S_N\neq0$ as a functional, that is, up to total
+derivatives. The
 power $\kappa^{n-2}$ and the absence of any other dimensionful constant are both needed:
 additional powers of $\kappa$ at fixed $n$, or a new dimensionful parameter, would allow
-terms with more derivatives and the correct dimension.\footnote{Equivalently, in terms of
-$h-\eta=\kappa\phi$ and $\kappa G$ the action is $\kappa^{-2}$ times a functional with no
-further dimensionful constant; a term of degree $n$ in $\phi,G$ then carries $\kappa^{n-2}$.}
+terms with more derivatives and the correct dimension.\footnote{Equivalently, the action is
+$\kappa^{-2}$ times a functional of $h-\eta=\kappa\phi$ and $\kappa G$ that is independent of
+$\kappa$ and contains no other dimensionful constant; a term of degree $n$ in $\phi,G$ then
+carries $\kappa^{n-2}$.}
 A local monomial $\mathcal L_{a,b,r}$ with $a$ fields $\phi$, $b$ fields $G$ and $r$
 derivatives, multiplied by $\kappa^{a+b-2}$, has mass dimension $d+b+r-2$, so that a
 dimensionless action requires
@@ -378,8 +381,10 @@ within a sector carry the same weight. It therefore decides which sectors may ap
 relates whole sectors to one another, but the form of the surviving terms, the contractions
 in the $\phi G$, $GG$ and $\phi GG$ kernels and their relative normalization, is fixed only by
 the Noether identities with general $\omega^\mu$, Sections~\ref{sec:identities}
-and~\ref{sec:solution}. In particular the $\phi G$ sector and the $\phi GG$ vertex have weight
-zero, and the dilatation says nothing about them.
+and~\ref{sec:solution}. In particular, the $\phi G$ sector has weight zero and is not constrained by the dilatation,
+while the $\phi GG$ vertex is related only as a whole to the $GG$ term by
+Eq.~\eqref{eq:orderkappa}; its contractions and the relative coefficients require the Noether
+identities with general $\omega^\mu$.
 
 % =======================================================================
 \section{The action ansatz}
