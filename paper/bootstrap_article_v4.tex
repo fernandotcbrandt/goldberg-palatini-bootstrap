@@ -135,7 +135,7 @@ determine boundary terms.
 
 The paper is organized so that the main text carries the logic of the construction and the
 appendices carry its details. Section~\ref{sec:variables} fixes the fields and their
-transformations, Section~\ref{sec:closure} derives the polynomial closure,
+transformations, Section~\ref{sec:closure} determines the sectors allowed in a polynomial action,
 Section~\ref{sec:ansatz} gives the ansatz and its tensor bases, Section~\ref{sec:identities}
 the identities and their decomposition into sectors, Section~\ref{sec:solution} the solution,
 and Section~\ref{sec:checks} the reduction to the metric formulation. Figure~\ref{fig:flow} summarizes the procedure. The notation and the derivation of the
@@ -242,7 +242,7 @@ In momentum space the derivatives become momenta and $\delta^{(1)}$ becomes a co
 The four tensors $D_{\phi^0},D_{\phi^1},D_{G^0},D_{G^1}$ are listed in Appendix~\ref{app:momentum}.
 
 % =======================================================================
-\section{Polynomial closure}
+\section{Allowed sectors of a polynomial action}
 \label{sec:closure}
 % =======================================================================
 
@@ -366,7 +366,7 @@ for $d>2$ every sector with $a\neq1$ vanishes. The surviving sector has $a=1$, h
 and $r=3-N$, and $r\ge0$ requires $N\le3$. A polynomial action therefore terminates at most at
 cubic order, and its cubic part can only be the derivative-free vertex $\phi GG$; the sectors
 $\phi\phi G$, with a derivative on either field, and $\phi\phi\phi$ are excluded. The same
-mechanism forbids closure in the metric formulation: written in the density
+mechanism forbids termination in the metric formulation: written in the density
 $h^{\mu\nu}=\eta^{\mu\nu}+\kappa\phi^{\mu\nu}$ alone, every sector has $b=0$ and $r=2$, and the
 highest one, with $a=N\ge2$, has nonvanishing weight, so its variation must be compensated at
 the next order and the series does not terminate~\cite{BrandtFrenkel1996}. The weights depend
@@ -659,8 +659,8 @@ conventions are matched, without a separate transcription of CLM's momentum-spac
 \paragraph*{Range of validity.} Uniqueness holds under the assumptions of the Result of
 Section~\ref{sec:closure}, which no longer include a restriction of the cubic sector, and
 for $d\geq4$, where the 31 basis elements are independent; at $d=3$ the cubic basis
-degenerates and the count of Section~\ref{sec:ansatz} does not apply, although the closure
-argument itself holds for $d>2$. It is not established for nonpolynomial actions, for additional powers of $\kappa$ or independent
+degenerates and the count of Section~\ref{sec:ansatz} does not apply, although the
+result of Section~\ref{sec:closure} itself holds for $d>2$. It is not established for nonpolynomial actions, for additional powers of $\kappa$ or independent
 dimensionful couplings, which allow sectors with $b+r=4$ such as quadratic curvature terms,
 or for $d=2$. The overall
 constant is not fixed by the homogeneous invariance conditions; it requires an external
@@ -677,7 +677,7 @@ question studied in Ref.~\cite{BrandtMcKeon2016}, is not addressed here.
   res/.style={box, fill=black!5},
   arr/.style={-{Latex[length=2mm]}, thick}]
 \node[box] (fields) {fields $\phi$, $G$\\Eqs.~\eqref{eq:dphi}--\eqref{eq:dG}};
-\node[box, right=of fields] (closure) {closure, Sec.~\ref{sec:closure}\\$N\le3$, $\phi GG$};
+\node[box, right=of fields] (closure) {allowed sectors, Sec.~\ref{sec:closure}\\$N\le3$, $\phi GG$};
 \node[box, right=of closure] (ansatz) {ansatz \eqref{eq:ansatz}\\31 coefficients};
 \node[box, right=of ansatz] (ident) {identities \eqref{eq:noether}\\Table~\ref{tab:identities}};
 \node[res, below=of ident] (khh) {$\W^{31}$: $K^{\phi\phi}=0$};
@@ -694,7 +694,7 @@ question studied in Ref.~\cite{BrandtMcKeon2016}, is not addressed here.
 \draw[arr] (s3) -- (result);
 \draw[arr] (result) -- (check);
 \end{tikzpicture}
-\caption{The determination of the action. Inputs and the polynomial closure of
+\caption{The determination of the action. Inputs and the allowed sectors of
 Section~\ref{sec:closure} on the top row; the sequential solution of
 Table~\ref{tab:flow} on the middle row; output and checks on the bottom row.}
 \label{fig:flow}
@@ -731,7 +731,7 @@ $\phi\phi$ one, and once the preceding constraints are imposed the cubic vertex 
 the sector that couples the two fields, $\W^{32}$.
 
 Since the equation for $G$ is algebraic and uniquely solvable for $d>2$ and nondegenerate
-metric density, a construction that closes at cubic order in the first-order variables
+metric density, a construction that terminates at cubic order in the first-order variables
 determines, through Eq.~\eqref{eq:second}, the infinite set of vertices of the metric
 formulation; once the conventions are matched as in Section~\ref{sec:checks}, its quadratic
 and cubic terms agree with those of Ref.~\cite{CLM1973}, the quadratic ones up to a surface
