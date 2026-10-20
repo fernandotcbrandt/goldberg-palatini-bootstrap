@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/1370488889.svg)](https://doi.org/10.5281/zenodo.22757769)
 
-This material accompanies `paper/bootstrap_article_v3.tex`. It reconstructs the first-order Goldberg–Palatini action from prescribed Noether identities and checks its second-order quadratic and cubic Lagrangians against Capper, Leibbrandt and Ramón Medrano (CLM), *Physical Review D* **8**, 4320 (1973), DOI: [10.1103/PhysRevD.8.4320](https://doi.org/10.1103/PhysRevD.8.4320).
+This material accompanies `paper/bootstrap_article_v4.tex`. It reconstructs the first-order Goldberg–Palatini action from prescribed Noether identities and checks its second-order quadratic and cubic Lagrangians against Capper, Leibbrandt and Ramón Medrano (CLM), *Physical Review D* **8**, 4320 (1973), DOI: [10.1103/PhysRevD.8.4320](https://doi.org/10.1103/PhysRevD.8.4320).
 
 ## Files and scope
 
@@ -94,7 +94,7 @@ An unevaluated symbol is not a successful residual. The aggregate PASS concerns 
 
 ## Conventions and interpretation
 
-The comparison uses the normalization of Eq. (5.1) **as written**, before the optional multiplication of the whole action by 1/2 discussed afterward. The first-order bootstrap strips the coupling; the CLM notebook restores symbolic kappa in the cubic term.
+The comparison uses the normalization of Eq. (6.1) **as written**. The first-order bootstrap strips the coupling; the CLM notebook restores symbolic kappa in the cubic term.
 
 The metric and indices are abstract. The export uses ``GPBootstrapData`Eta[i,j]`` to denote a metric between free index slots, not numerical components. The six slots are `(lambda, mu, nu, rho, sigma, tau)`; the eight slots are `(mu, nu, lambda, alpha, beta, rho, sigma, tau)`. xAct raises and lowers indices with the background metric `eta`.
 
@@ -102,7 +102,7 @@ The metric and indices are abstract. The export uses ``GPBootstrapData`Eta[i,j]`
 
 The bootstrap basis is used in generic dimension d >= 4. The derived inverse has a pole at d = 2. No gauge fixing or field equations for phi are used in the CLM comparison.
 
-The nonlinear identities are solved with the field momenta identified, as described in Section IV. Every solution for arbitrary momenta also solves this specialized system. The specialized solution space is one-dimensional, and it contains the nonzero Goldberg–Palatini action, for which the identities hold for arbitrary momenta, since its variation under the prescribed transformations is a total derivative. Thus the two solution spaces coincide within the stated ansatz. This distribution does not include a separate generic-momentum W31 calculation or claim a direct computational verification of all identities at arbitrary momenta.
+The nonlinear identities are solved with the field momenta identified, as described in Section V. Every solution for arbitrary momenta also solves this specialized system. The specialized solution space is one-dimensional, and it contains the nonzero Goldberg–Palatini action, for which the identities hold for arbitrary momenta, since its variation under the prescribed transformations is a total derivative. Thus the two solution spaces coincide within the stated ansatz. This distribution does not include a separate generic-momentum W31 calculation or claim a direct computational verification of all identities at arbitrary momenta.
 
 CLM uses the opposite Ricci-tensor sign and an action prefactor 2/K², whereas the unrescaled bootstrap action has prefactor 1/kappa². With K = kappa and CLM's coupling-stripped coefficients, the checks establish:
 
@@ -127,12 +127,12 @@ Equation and table numbers refer to the current manuscript; the LaTeX labels ide
 
 | Calculation | Manuscript location/label |
 | --- | --- |
-| Kernel bases and projection sets | Tables I–II; `tab:kernels`, `tab:identities`; Appendices C–D |
-| Sequential coefficient solution | Table III; `tab:flow` |
-| Explicit first-order kernels | Appendix E; `app:kernels`; Tables V–VIII |
-| Eliminating the connection | Eqs. (6.1)–(6.2); `eq:second`, `eq:cubicvertex` |
-| Quadratic comparison and boundary current | Eq. (6.3a); `eq:clm-quadratic` |
-| Cubic comparison | Eq. (6.3b); `eq:clm-cubic` |
+| Kernel bases and projection sets | Tables II–III; `tab:kernels`, `tab:identities`; Appendices C–D |
+| Sequential coefficient solution | Table IV; `tab:flow` |
+| Explicit first-order kernels | Appendix E; `app:kernels`; Tables VI–IX |
+| Eliminating the connection | Eqs. (7.1)–(7.2); `eq:second`, `eq:cubicvertex` |
+| Quadratic comparison and boundary current | Eq. (7.3a); `eq:clm-quadratic` |
+| Cubic comparison | Eq. (7.3b); `eq:clm-cubic` |
 | File descriptions and reproducibility | Appendix F; `app:implementation` |
 
 ## Command-line and free-Engine status
