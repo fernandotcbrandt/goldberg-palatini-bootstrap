@@ -10,3 +10,6 @@
 *Notes.bib
 # macOS
 .DS_Store
+# Manuscript sources are kept locally; the paper is on arXiv (2610.28065)
+paper/
+texput.log

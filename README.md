@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/1370488889.svg)](https://doi.org/10.5281/zenodo.22757769)
 
-This material accompanies F. T. Brandt and A. C. B. Carvalho, *Reconstructing the Goldberg–Palatini Action from Noether Identities*, [arXiv:2610.28065](https://arxiv.org/abs/2610.28065) [hep-th] (source: `paper/bootstrap_article_v4.tex`). It reconstructs the first-order Goldberg–Palatini action from prescribed Noether identities and checks its second-order quadratic and cubic Lagrangians against Capper, Leibbrandt and Ramón Medrano (CLM), *Physical Review D* **8**, 4320 (1973), DOI: [10.1103/PhysRevD.8.4320](https://doi.org/10.1103/PhysRevD.8.4320).
+This material accompanies F. T. Brandt and A. C. B. Carvalho, *Reconstructing the Goldberg–Palatini Action from Noether Identities*, [arXiv:2610.28065](https://arxiv.org/abs/2610.28065) [hep-th]. The manuscript itself is available from arXiv; this repository contains only the symbolic calculations. It reconstructs the first-order Goldberg–Palatini action from prescribed Noether identities and checks its second-order quadratic and cubic Lagrangians against Capper, Leibbrandt and Ramón Medrano (CLM), *Physical Review D* **8**, 4320 (1973), DOI: [10.1103/PhysRevD.8.4320](https://doi.org/10.1103/PhysRevD.8.4320).
 
 ## Files and scope
 
@@ -123,7 +123,7 @@ The transcription of CLM Eq. (2.16) uses the index-consistent contraction `phi_(
 
 ## Connection to the manuscript
 
-Equation and table numbers refer to the current manuscript; the LaTeX labels identify them if numbering changes.
+Equation and table numbers refer to arXiv:2610.28065v1; the LaTeX labels identify them if numbering changes in later versions.
 
 | Calculation | Manuscript location/label |
 | --- | --- |
@@ -142,6 +142,8 @@ Complete public `.wls` reproduction drivers are **not yet supplied or validated*
 Running without a paid Mathematica license would require a separately tested Wolfram Engine workflow and compliance with the terms of its free license. It is not execution without a license. See the [official terms](https://www.wolfram.com/legal/terms/wolfram-engine.html). Tests with an installed Mathematica kernel do not establish validation with the freely licensed Engine distribution.
 
 ## Release status
+
+Release `v1.2.1` (2026-10-21) contains only the symbolic material: the two notebooks and the kernel data, unchanged from `v1.2-arxiv`. The manuscript files were removed from the repository; the paper is available as arXiv:2610.28065.
 
 Release `v1.2-arxiv` (2026-10-21; version DOI 10.5281/zenodo.23534851) contains the version of the paper posted on arXiv as arXiv:2610.28065 (`paper/bootstrap_article_v4.tex` and its PDF), the bootstrap notebook and kernel data evaluated on 2026-10-16, and the CLM notebook evaluated with those data. It is archived on Zenodo; concept DOI 10.5281/zenodo.22757769 always resolves to the latest version, and the version DOI of each release is listed on the Zenodo record.
 
