@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/1370488889.svg)](https://doi.org/10.5281/zenodo.22757769)
 
-This material accompanies `paper/bootstrap_article_v4.tex`. It reconstructs the first-order Goldberg–Palatini action from prescribed Noether identities and checks its second-order quadratic and cubic Lagrangians against Capper, Leibbrandt and Ramón Medrano (CLM), *Physical Review D* **8**, 4320 (1973), DOI: [10.1103/PhysRevD.8.4320](https://doi.org/10.1103/PhysRevD.8.4320).
+This material accompanies F. T. Brandt and A. C. B. Carvalho, *Reconstructing the Goldberg–Palatini Action from Noether Identities*, [arXiv:2610.28065](https://arxiv.org/abs/2610.28065) [hep-th] (source: `paper/bootstrap_article_v4.tex`). It reconstructs the first-order Goldberg–Palatini action from prescribed Noether identities and checks its second-order quadratic and cubic Lagrangians against Capper, Leibbrandt and Ramón Medrano (CLM), *Physical Review D* **8**, 4320 (1973), DOI: [10.1103/PhysRevD.8.4320](https://doi.org/10.1103/PhysRevD.8.4320).
 
 ## Files and scope
 
@@ -143,10 +143,12 @@ Running without a paid Mathematica license would require a separately tested Wol
 
 ## Release status
 
-Release `v1.1-submission` (2026-10-16) contains the version of the paper prepared for submission (`paper/bootstrap_article_v3.tex` and its PDF), the bootstrap notebook and kernel data evaluated on 2026-10-16, and the CLM notebook evaluated with those data. It is archived on Zenodo; concept DOI 10.5281/zenodo.22757769 always resolves to the latest version, and the version DOI of each release is listed on the Zenodo record.
+Release `v1.2-arxiv` (2026-10-21) contains the version of the paper posted on arXiv as arXiv:2610.28065 (`paper/bootstrap_article_v4.tex` and its PDF), the bootstrap notebook and kernel data evaluated on 2026-10-16, and the CLM notebook evaluated with those data. It is archived on Zenodo; concept DOI 10.5281/zenodo.22757769 always resolves to the latest version, and the version DOI of each release is listed on the Zenodo record.
 
-The earlier release `v1.0-submission` (2026-09-14; version DOI 10.5281/zenodo.22757770) contains the version of the paper first sent to the coauthor.
+The tag `v1.1-submission` (2026-10-14) marks the earlier version prepared for submission (`paper/bootstrap_article_v3.tex`). It was not published as a GitHub release and therefore has no Zenodo version.
 
-The command-line drivers and the free-Engine validation described above are not part of either release. Third-party packages remain subject to their own licenses.
+The first release `v1.0-submission` (2026-09-14; version DOI 10.5281/zenodo.22757770) contains the version of the paper first sent to the coauthor.
+
+The command-line drivers and the free-Engine validation described above are not part of any release. Third-party packages remain subject to their own licenses.
 
 Repository: https://github.com/fernandotcbrandt/goldberg-palatini-bootstrap (MIT license for the authors' code).
