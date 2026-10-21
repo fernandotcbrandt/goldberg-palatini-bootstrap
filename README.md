@@ -143,7 +143,7 @@ Running without a paid Mathematica license would require a separately tested Wol
 
 ## Release status
 
-Release `v1.2-arxiv` (2026-10-21) contains the version of the paper posted on arXiv as arXiv:2610.28065 (`paper/bootstrap_article_v4.tex` and its PDF), the bootstrap notebook and kernel data evaluated on 2026-10-16, and the CLM notebook evaluated with those data. It is archived on Zenodo; concept DOI 10.5281/zenodo.22757769 always resolves to the latest version, and the version DOI of each release is listed on the Zenodo record.
+Release `v1.2-arxiv` (2026-10-21; version DOI 10.5281/zenodo.23534851) contains the version of the paper posted on arXiv as arXiv:2610.28065 (`paper/bootstrap_article_v4.tex` and its PDF), the bootstrap notebook and kernel data evaluated on 2026-10-16, and the CLM notebook evaluated with those data. It is archived on Zenodo; concept DOI 10.5281/zenodo.22757769 always resolves to the latest version, and the version DOI of each release is listed on the Zenodo record.
 
 The tag `v1.1-submission` (2026-10-14) marks the earlier version prepared for submission (`paper/bootstrap_article_v3.tex`). It was not published as a GitHub release and therefore has no Zenodo version.
 
